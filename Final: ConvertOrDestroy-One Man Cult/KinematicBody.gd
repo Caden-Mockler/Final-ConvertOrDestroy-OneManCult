@@ -12,13 +12,14 @@ func get_input():
 	var input_dir = Vector3()
 	if Input.is_action_pressed("move_forward"):
 		input_dir += -camera.global_transform.basis.z
-	if Input.is_action_just_pressed("move_back"):
+	if Input.is_action_pressed("move_back"):
 		input_dir += camera.global_transform.basis.z
-	if Input.is_action_just_pressed("strafe_left"):
+	if Input.is_action_just_pressed("move_left"):
 		input_dir += -camera.global_transform.basis.x
-	if Input.is_action_just_pressed("strafe_right"):
+	if Input.is_action_just_pressed("move_right"):
 		input_dir += camera.global_transform.basis.x
 	input_dir = input_dir.normalized()
+	return input_dir
 
 func _unhandled_input(event):
 	if event is InputEventMouseMotion:
@@ -29,7 +30,7 @@ func _unhandled_input(event):
 func _physics_process(delta):
 	velocity.y += gravity * delta
 	var desired_velocity = get_input() * max_speed
-	
+
 	velocity.x = desired_velocity.x
 	velocity.z = desired_velocity.z
 	velocity = move_and_slide(velocity, Vector3.UP, true)
