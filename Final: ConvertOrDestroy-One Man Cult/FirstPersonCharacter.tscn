@@ -33,9 +33,10 @@ shape = SubResource( 2 )
 [node name="Pivot" type="Spatial" parent="KinematicBody"]
 
 [node name="Camera" type="Camera" parent="KinematicBody/Pivot"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.35488, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.36168, 0 )
 
 [node name="Ground" type="StaticBody" parent="."]
+editor/display_folded = true
 
 [node name="MeshInstance" type="MeshInstance" parent="Ground"]
 mesh = SubResource( 3 )
