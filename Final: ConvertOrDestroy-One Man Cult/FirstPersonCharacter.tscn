@@ -1,8 +1,9 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://KinematicBody.gd" type="Script" id=1]
 [ext_resource path="res://Weapon Models/uziLong.obj" type="ArrayMesh" id=2]
 [ext_resource path="res://Weapon Models/shotgunShort.obj" type="ArrayMesh" id=3]
+[ext_resource path="res://SkyScraper.tscn" type="PackedScene" id=4]
 
 [sub_resource type="CapsuleShape" id=1]
 radius = 0.5
@@ -22,6 +23,7 @@ points = PoolVector3Array( 50, 0, 50, -50, 0, 50, 50, 0, -50, -50, 0, -50 )
 [node name="Spatial" type="Spatial"]
 
 [node name="KinematicBody" type="KinematicBody" parent="."]
+editor/display_folded = true
 script = ExtResource( 1 )
 
 [node name="Body" type="CollisionShape" parent="KinematicBody"]
@@ -33,6 +35,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.26432, 0 )
 shape = SubResource( 2 )
 
 [node name="Pivot" type="Spatial" parent="KinematicBody"]
+editor/display_folded = true
 
 [node name="Camera" type="Camera" parent="KinematicBody/Pivot"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.36168, -0.215472 )
@@ -129,3 +132,14 @@ material/0 = SubResource( 4 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Ground"]
 shape = SubResource( 5 )
+
+[node name="Buildings" type="Node" parent="."]
+
+[node name="Skyscraper1" parent="Buildings" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6809, -0.551429, 0 )
+
+[node name="Skyscraper2" parent="Buildings" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.63516, -0.507751, -16.6056 )
+
+[node name="Skyscraper3" parent="Buildings" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.59391, 0, 13.5754 )
