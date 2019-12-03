@@ -11,13 +11,13 @@ radius = 0.5
 extents = Vector3( 0.4, 0.1, 0.4 )
 
 [sub_resource type="PlaneMesh" id=3]
-size = Vector2( 20, 20 )
+size = Vector2( 100, 100 )
 
 [sub_resource type="SpatialMaterial" id=4]
 albedo_color = Color( 0.137255, 0.435294, 0.12549, 1 )
 
 [sub_resource type="ConvexPolygonShape" id=5]
-points = PoolVector3Array( 7.5, 0, 7.5, -7.5, 0, 7.5, 7.5, 0, -7.5, -7.5, 0, -7.5 )
+points = PoolVector3Array( 50, 0, 50, -50, 0, 50, 50, 0, -50, -50, 0, -50 )
 
 [node name="Spatial" type="Spatial"]
 
