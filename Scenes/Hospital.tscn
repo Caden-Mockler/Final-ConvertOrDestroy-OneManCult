@@ -34,5 +34,41 @@ mesh = SubResource( 4 )
 material/0 = null
 
 [node name="SpotLight" type="SpotLight" parent="Skyscraper/StaticBody2"]
-transform = Transform( 0.0537517, 0.127297, -0.756718, -0.00469017, 0.394485, 0.0660283, 0.623429, 5.86443e-10, 0.0442839, -2.08884, 4.55713, 0.144937 )
-light_energy = 3.42
+transform = Transform( 0.0452707, 0.106231, -0.65659, -0.00395015, 0.329074, 0.052969, 0.525064, 0.000463462, 0.0362772, -2.96979, 4.48425, 0.0861876 )
+light_energy = 6.17
+
+[node name="SpotLight2" type="SpotLight" parent="Skyscraper/StaticBody2"]
+transform = Transform( -0.0442714, 0.633679, -0.202325, -0.00216931, 0.101246, 0.317578, 0.525143, 0.0343386, -0.00736029, 0.580858, 6.09267, 0.0710213 )
+light_energy = 6.79
+light_indirect_energy = 0.0
+
+[node name="SpotLight6" type="SpotLight" parent="Skyscraper/StaticBody2"]
+transform = Transform( -0.664635, 0.0312634, -0.0415547, 0.0195302, 0.32591, -0.0671748, 0.0271018, -0.107665, -0.514473, 0.667316, 2.77791, -4.39387 )
+light_energy = 3.73
+spot_range = 8.6
+
+[node name="SpotLight7" type="SpotLight" parent="Skyscraper/StaticBody2"]
+transform = Transform( 0.666667, -0.000243969, -1.61832e-05, 0.000121216, 0.33265, -0.0213321, 2.50761e-05, 0.0336822, 0.525237, 0.589591, 3.15097, 4.04103 )
+light_energy = 5.09
+spot_range = 7.9
+
+[node name="SpotLight8" type="SpotLight" parent="Skyscraper/StaticBody2"]
+transform = Transform( 0.00818452, -0.330055, -0.579173, 0.00233183, 0.289615, -0.165011, 0.526263, 6.61795e-09, 0.00743683, -2.77301, 2.93094, 0.000677611 )
+light_energy = 5.54
+spot_range = 5.4
+
+[node name="SpotLight9" type="SpotLight" parent="Skyscraper/StaticBody2"]
+transform = Transform( -0.0126838, -0.131133, -0.653519, -0.00127231, 0.326821, -0.0655544, 0.526217, 1.22519e-10, -0.010213, -3.11413, 2.35696, 0 )
+light_energy = 5.9
+light_indirect_energy = 15.22
+
+[node name="SpotLight10" type="SpotLight" parent="Skyscraper/StaticBody2"]
+transform = Transform( -0.036442, -0.180718, -0.64067, -0.00513142, 0.320853, -0.0902132, 0.525466, 9.81924e-10, -0.0298891, -3.61885, 1.03377, -0.257404 )
+light_energy = 2.56
+spot_range = 7.6
+
+[node name="SpotLight11" type="SpotLight" parent="Skyscraper/StaticBody2"]
+transform = Transform( -0.0764145, -0.00645763, 0.662241, -0.00037011, 0.333318, 0.00320753, -0.522847, -6.78455e-10, -0.0603301, 6.23995, 3.16891, -0.462767 )
+light_energy = 3.63
+light_indirect_energy = 0.0
+spot_range = 9.8
