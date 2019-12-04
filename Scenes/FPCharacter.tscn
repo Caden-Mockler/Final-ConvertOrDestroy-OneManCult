@@ -666,6 +666,3 @@ transform = Transform( -0.998795, 0, -0.0490714, 0, 1, 0, 0.0490714, 0, -0.99879
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource( 5 )
-
-[node name="Camera" type="Camera" parent="WorldEnvironment"]
-transform = Transform( 0.0956661, 0.513409, 0.852795, -0.0572349, 0.858144, -0.510208, -0.993767, 0, 0.11148, 0, 3.62065, 0 )
