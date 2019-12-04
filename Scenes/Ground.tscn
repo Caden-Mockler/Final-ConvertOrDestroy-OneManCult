@@ -1,0 +1,750 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Assets/Building Textures/modularBuildings_069.obj" type="ArrayMesh" id=1]
+[ext_resource path="res://Assets/Building Textures/modularBuildings_010.obj" type="ArrayMesh" id=2]
+[ext_resource path="res://Assets/Building Textures/modularBuildings_054.obj" type="ArrayMesh" id=3]
+
+[sub_resource type="PlaneMesh" id=1]
+size = Vector2( 100, 100 )
+
+[sub_resource type="SpatialMaterial" id=2]
+albedo_color = Color( 0.313726, 0.513726, 0.0941176, 1 )
+
+[sub_resource type="BoxShape" id=3]
+extents = Vector3( 50, 0, 50 )
+
+[node name="Spatial" type="Spatial"]
+
+[node name="Ground" type="StaticBody" parent="."]
+editor/display_folded = true
+
+[node name="MeshInstance" type="MeshInstance" parent="Ground"]
+mesh = SubResource( 1 )
+material/0 = SubResource( 2 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+shape = SubResource( 3 )
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( -0.22843, 0.371234, -0.900003, 0.0269303, 0.926501, 0.375328, 0.973188, 0.0614988, -0.221638, 9.83729, 21.0796, 21.0349 )
+
+[node name="Buildings" type="Node" parent="."]
+editor/display_folded = true
+
+[node name="modularBuildings_112" type="MeshInstance" parent="Buildings"]
+transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 21.8954, -0.0127664, 41.4595 )
+mesh = ExtResource( 1 )
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+material/4 = null
+
+[node name="modularBuildings_113" type="MeshInstance" parent="Buildings"]
+transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 21.8954, -0.0127664, 37.3021 )
+mesh = ExtResource( 1 )
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+material/4 = null
+
+[node name="modularBuildings_114" type="MeshInstance" parent="Buildings"]
+transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 18.1264, -0.0127664, 37.3021 )
+mesh = ExtResource( 1 )
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+material/4 = null
+
+[node name="modularBuildings_115" type="MeshInstance" parent="Buildings"]
+transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 18.1264, -0.0127664, 41.3571 )
+mesh = ExtResource( 1 )
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+material/4 = null
+
+[node name="modularBuildings_116" type="MeshInstance" parent="Buildings"]
+transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 18.1287, -0.0127664, 45.3951 )
+mesh = ExtResource( 1 )
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+material/4 = null
+
+[node name="modularBuildings_117" type="MeshInstance" parent="Buildings"]
+transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 13.3827, -0.0518594, 45.3715 )
+mesh = ExtResource( 1 )
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+material/4 = null
+
+[node name="modularBuildings_118" type="MeshInstance" parent="Buildings"]
+transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 14.1297, -0.0127664, 41.3079 )
+mesh = ExtResource( 1 )
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+material/4 = null
+
+[node name="modularBuildings_119" type="MeshInstance" parent="Buildings"]
+transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 14.1297, -0.0127664, 37.3108 )
+mesh = ExtResource( 1 )
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+material/4 = null
+
+[node name="modularBuildings_120" type="MeshInstance" parent="Buildings"]
+transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 10.2395, -0.0127664, 37.3108 )
+mesh = ExtResource( 1 )
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+material/4 = null
+
+[node name="modularBuildings_121" type="MeshInstance" parent="Buildings"]
+transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 10.2395, -0.0127664, 41.3382 )
+mesh = ExtResource( 1 )
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+material/4 = null
+
+[node name="modularBuildings_122" type="MeshInstance" parent="Buildings"]
+transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 9.16994, 0.145666, 45.6862 )
+mesh = ExtResource( 1 )
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+material/4 = null
+
+[node name="modularBuildings_123" type="MeshInstance" parent="Buildings"]
+transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 4.65109, 0.145666, 45.6862 )
+mesh = ExtResource( 1 )
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+material/4 = null
+
+[node name="modularBuildings_124" type="MeshInstance" parent="Buildings"]
+transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 4.65109, 0.145666, 41.2397 )
+mesh = ExtResource( 1 )
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+material/4 = null
+
+[node name="modularBuildings_125" type="MeshInstance" parent="Buildings"]
+transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 4.65109, 0.145666, 37.5942 )
+mesh = ExtResource( 1 )
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+material/4 = null
+
+[node name="modularBuildings_010" type="MeshInstance" parent="Buildings"]
+transform = Transform( 3, 0, 0, 0, 1, 0, 0, 0, 3, 44.6364, 1.87602, 37.8368 )
+mesh = ExtResource( 2 )
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+material/4 = null
+material/5 = null
+material/6 = null
+material/7 = null
+material/8 = null
+material/9 = null
+material/10 = null
+material/11 = null
+material/12 = null
+material/13 = null
+material/14 = null
+material/15 = null
+material/16 = null
+material/17 = null
+material/18 = null
+material/19 = null
+material/20 = null
+material/21 = null
+material/22 = null
+material/23 = null
+
+[node name="modularBuildings_054" type="MeshInstance" parent="Buildings"]
+transform = Transform( 4, 0, 0, 0, 10, 0, 0, 0, 4, 44.6508, -0.00229037, 34.0539 )
+mesh = ExtResource( 3 )
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+material/4 = null
+material/5 = null
+
+[node name="modularBuildings_055" type="MeshInstance" parent="Buildings"]
+transform = Transform( 4, 0, 0, 0, 10, 0, 0, 0, 4, 44.6508, -0.00229037, 20.9038 )
+mesh = ExtResource( 3 )
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+material/4 = null
+material/5 = null
+
+[node name="modularBuildings_056" type="MeshInstance" parent="Buildings"]
+transform = Transform( 4, 0, 0, 0, 10, 0, 0, 0, 4, 26.6107, -0.00229037, 20.9038 )
+mesh = ExtResource( 3 )
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+material/4 = null
+material/5 = null
+
+[node name="modularBuildings_062" type="MeshInstance" parent="Buildings"]
+transform = Transform( 4, 0, 0, 0, 10, 0, 0, 0, 4, 19.7869, -0.00229037, 20.9038 )
+mesh = ExtResource( 3 )
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+material/4 = null
+material/5 = null
+
+[node name="modularBuildings_063" type="MeshInstance" parent="Buildings"]
+transform = Transform( 4, 0, 0, 0, 10, 0, 0, 0, 4, 19.7869, -0.00229037, 26.8653 )
+mesh = ExtResource( 3 )
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+material/4 = null
+material/5 = null
+
+[node name="modularBuildings_064" type="MeshInstance" parent="Buildings"]
+transform = Transform( 4, 0, 0, 0, 10, 0, 0, 0, 4, 19.7869, -0.00229037, 33.4934 )
+mesh = ExtResource( 3 )
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+material/4 = null
+material/5 = null
+
+[node name="modularBuildings_065" type="MeshInstance" parent="Buildings"]
+transform = Transform( 4, 0, 0, 0, 10, 0, 0, 0, 4, 12.6597, -0.00229037, 33.4934 )
+mesh = ExtResource( 3 )
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+material/4 = null
+material/5 = null
+
+[node name="modularBuildings_077" type="MeshInstance" parent="Buildings"]
+transform = Transform( 4, 0, 0, 0, 10, 0, 0, 0, 4, 6.45867, -0.00229037, 33.4934 )
+mesh = ExtResource( 3 )
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+material/4 = null
+material/5 = null
+
+[node name="modularBuildings_078" type="MeshInstance" parent="Buildings"]
+transform = Transform( 4, 0, 0, 0, 10, 0, 0, 0, 4, 6.45867, -0.00229037, 26.3733 )
+mesh = ExtResource( 3 )
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+material/4 = null
+material/5 = null
+
+[node name="modularBuildings_079" type="MeshInstance" parent="Buildings"]
+transform = Transform( 4, 0, 0, 0, 10, 0, 0, 0, 4, 6.45867, -0.00229037, 20.1245 )
+mesh = ExtResource( 3 )
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+material/4 = null
+material/5 = null
+
+[node name="modularBuildings_080" type="MeshInstance" parent="Buildings"]
+transform = Transform( 4, 0, 0, 0, 10, 0, 0, 0, 4, 6.45867, -0.00229037, 14.7704 )
+mesh = ExtResource( 3 )
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+material/4 = null
+material/5 = null
+
+[node name="modularBuildings_081" type="MeshInstance" parent="Buildings"]
+transform = Transform( 4, 0, 0, 0, 10, 0, 0, 0, 4, 6.45867, -0.00229037, 9.3367 )
+mesh = ExtResource( 3 )
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+material/4 = null
+material/5 = null
+
+[node name="modularBuildings_082" type="MeshInstance" parent="Buildings"]
+transform = Transform( 4, 0, 0, 0, 10, 0, 0, 0, 4, 0.126664, -0.00229037, 9.3367 )
+mesh = ExtResource( 3 )
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+material/4 = null
+material/5 = null
+
+[node name="modularBuildings_083" type="MeshInstance" parent="Buildings"]
+transform = Transform( 4, 0, 0, 0, 10, 0, 0, 0, 4, 0.126664, -0.00229037, 14.8872 )
+mesh = ExtResource( 3 )
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+material/4 = null
+material/5 = null
+
+[node name="modularBuildings_084" type="MeshInstance" parent="Buildings"]
+transform = Transform( 4, 0, 0, 0, 10, 0, 0, 0, 4, 0.126664, -0.00229037, 20.3581 )
+mesh = ExtResource( 3 )
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+material/4 = null
+material/5 = null
+
+[node name="modularBuildings_085" type="MeshInstance" parent="Buildings"]
+transform = Transform( 4, 0, 0, 0, 10, 0, 0, 0, 4, 0.126664, -0.00229037, 26.756 )
+mesh = ExtResource( 3 )
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+material/4 = null
+material/5 = null
+
+[node name="modularBuildings_086" type="MeshInstance" parent="Buildings"]
+transform = Transform( 4, 0, 0, 0, 10, 0, 0, 0, 4, 0.126664, -0.00229037, 33.2872 )
+mesh = ExtResource( 3 )
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+material/4 = null
+material/5 = null
+
+[node name="modularBuildings_087" type="MeshInstance" parent="Buildings"]
+transform = Transform( 4, 0, 0, 0, 10, 0, 0, 0, 4, -6.05495, -0.00229037, 33.2872 )
+mesh = ExtResource( 3 )
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+material/4 = null
+material/5 = null
+
+[node name="modularBuildings_088" type="MeshInstance" parent="Buildings"]
+transform = Transform( 4, 0, 0, 0, 10, 0, 0, 0, 4, -6.05495, -0.00229037, 26.1657 )
+mesh = ExtResource( 3 )
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+material/4 = null
+material/5 = null
+
+[node name="modularBuildings_089" type="MeshInstance" parent="Buildings"]
+transform = Transform( 4, 0, 0, 0, 10, 0, 0, 0, 4, -6.05495, -0.00229037, 19.8717 )
+mesh = ExtResource( 3 )
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+material/4 = null
+material/5 = null
+
+[node name="modularBuildings_090" type="MeshInstance" parent="Buildings"]
+transform = Transform( 4, 0, 0, 0, 10, 0, 0, 0, 4, -6.05495, -0.00229037, 14.625 )
+mesh = ExtResource( 3 )
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+material/4 = null
+material/5 = null
+
+[node name="modularBuildings_091" type="MeshInstance" parent="Buildings"]
+transform = Transform( 4, 0, 0, 0, 10, 0, 0, 0, 4, -6.05495, -0.00229037, 9.26686 )
+mesh = ExtResource( 3 )
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+material/4 = null
+material/5 = null
+
+[node name="modularBuildings_092" type="MeshInstance" parent="Buildings"]
+transform = Transform( 4, 0, 0, 0, 10, 0, 0, 0, 4, -11.8351, -0.00229037, 9.26686 )
+mesh = ExtResource( 3 )
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+material/4 = null
+material/5 = null
+
+[node name="modularBuildings_093" type="MeshInstance" parent="Buildings"]
+transform = Transform( 4, 0, 0, 0, 10, 0, 0, 0, 4, -11.8351, -0.00229037, 14.9158 )
+mesh = ExtResource( 3 )
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+material/4 = null
+material/5 = null
+
+[node name="modularBuildings_094" type="MeshInstance" parent="Buildings"]
+transform = Transform( 4, 0, 0, 0, 10, 0, 0, 0, 4, -11.8351, -0.00229037, 20.1664 )
+mesh = ExtResource( 3 )
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+material/4 = null
+material/5 = null
+
+[node name="modularBuildings_095" type="MeshInstance" parent="Buildings"]
+transform = Transform( 4, 0, 0, 0, 10, 0, 0, 0, 4, -11.8351, -0.00229037, 26.3447 )
+mesh = ExtResource( 3 )
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+material/4 = null
+material/5 = null
+
+[node name="modularBuildings_096" type="MeshInstance" parent="Buildings"]
+transform = Transform( 4, 0, 0, 0, 10, 0, 0, 0, 4, -11.8351, -0.00229037, 33.2434 )
+mesh = ExtResource( 3 )
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+material/4 = null
+material/5 = null
+
+[node name="modularBuildings_066" type="MeshInstance" parent="Buildings"]
+transform = Transform( 4, 0, 0, 0, 10, 0, 0, 0, 4, 12.6597, -0.00229037, 27.2871 )
+mesh = ExtResource( 3 )
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+material/4 = null
+material/5 = null
+
+[node name="modularBuildings_067" type="MeshInstance" parent="Buildings"]
+transform = Transform( 4, 0, 0, 0, 10, 0, 0, 0, 4, 12.6597, -0.00229037, 20.4285 )
+mesh = ExtResource( 3 )
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+material/4 = null
+material/5 = null
+
+[node name="modularBuildings_068" type="MeshInstance" parent="Buildings"]
+transform = Transform( 4, 0, 0, 0, 10, 0, 0, 0, 4, 12.6597, -0.00229037, 14.9134 )
+mesh = ExtResource( 3 )
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+material/4 = null
+material/5 = null
+
+[node name="modularBuildings_073" type="MeshInstance" parent="Buildings"]
+transform = Transform( 4, 0, 0, 0, 10, 0, 0, 0, 4, 12.6597, -0.00229037, 9.37246 )
+mesh = ExtResource( 3 )
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+material/4 = null
+material/5 = null
+
+[node name="modularBuildings_074" type="MeshInstance" parent="Buildings"]
+transform = Transform( 4, 0, 0, 0, 10, 0, 0, 0, 4, 18.4044, -0.00229037, 9.37246 )
+mesh = ExtResource( 3 )
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+material/4 = null
+material/5 = null
+
+[node name="modularBuildings_075" type="MeshInstance" parent="Buildings"]
+transform = Transform( 4, 0, 0, 0, 10, 0, 0, 0, 4, 25.4994, -0.00229037, 9.37246 )
+mesh = ExtResource( 3 )
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+material/4 = null
+material/5 = null
+
+[node name="modularBuildings_076" type="MeshInstance" parent="Buildings"]
+transform = Transform( 4, 0, 0, 0, 10, 0, 0, 0, 4, 33.2846, -0.00229037, 9.37246 )
+mesh = ExtResource( 3 )
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+material/4 = null
+material/5 = null
+
+[node name="modularBuildings_070" type="MeshInstance" parent="Buildings"]
+transform = Transform( 4, 0, 0, 0, 10, 0, 0, 0, 4, 18.6789, -0.00229037, 14.9134 )
+mesh = ExtResource( 3 )
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+material/4 = null
+material/5 = null
+
+[node name="modularBuildings_071" type="MeshInstance" parent="Buildings"]
+transform = Transform( 4, 0, 0, 0, 10, 0, 0, 0, 4, 25.2284, -0.00229037, 14.9134 )
+mesh = ExtResource( 3 )
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+material/4 = null
+material/5 = null
+
+[node name="modularBuildings_072" type="MeshInstance" parent="Buildings"]
+transform = Transform( 4, 0, 0, 0, 10, 0, 0, 0, 4, 32.1023, -0.00229037, 14.9134 )
+mesh = ExtResource( 3 )
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+material/4 = null
+material/5 = null
+
+[node name="modularBuildings_057" type="MeshInstance" parent="Buildings"]
+transform = Transform( 4, 0, 0, 0, 10, 0, 0, 0, 4, 26.6107, -0.00229037, 26.9423 )
+mesh = ExtResource( 3 )
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+material/4 = null
+material/5 = null
+
+[node name="modularBuildings_058" type="MeshInstance" parent="Buildings"]
+transform = Transform( 4, 0, 0, 0, 10, 0, 0, 0, 4, 26.6107, -0.00229037, 32.3206 )
+mesh = ExtResource( 3 )
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+material/4 = null
+material/5 = null
+
+[node name="modularBuildings_059" type="MeshInstance" parent="Buildings"]
+transform = Transform( 4, 0, 0, 0, 10, 0, 0, 0, 4, 32.6359, -0.00229037, 32.3206 )
+mesh = ExtResource( 3 )
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+material/4 = null
+material/5 = null
+
+[node name="modularBuildings_060" type="MeshInstance" parent="Buildings"]
+transform = Transform( 4, 0, 0, 0, 10, 0, 0, 0, 4, 32.6359, -0.00229037, 26.8626 )
+mesh = ExtResource( 3 )
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+material/4 = null
+material/5 = null
+
+[node name="modularBuildings_061" type="MeshInstance" parent="Buildings"]
+transform = Transform( 4, 0, 0, 0, 10, 0, 0, 0, 4, 32.6359, -0.00229037, 21.0969 )
+mesh = ExtResource( 3 )
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+material/4 = null
+material/5 = null
+
+[node name="modularBuildings_069" type="MeshInstance" parent="Buildings"]
+transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 44.6407, -0.0127664, 37.8223 )
+mesh = ExtResource( 1 )
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+material/4 = null
+
+[node name="modularBuildings_097" type="MeshInstance" parent="Buildings"]
+transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 38.6062, -0.0127664, 37.8223 )
+mesh = ExtResource( 1 )
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+material/4 = null
+
+[node name="modularBuildings_098" type="MeshInstance" parent="Buildings"]
+transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 34.5222, -0.0127664, 37.8223 )
+mesh = ExtResource( 1 )
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+material/4 = null
+
+[node name="modularBuildings_099" type="MeshInstance" parent="Buildings"]
+transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 44.1401, -0.0127664, 41.6079 )
+mesh = ExtResource( 1 )
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+material/4 = null
+
+[node name="modularBuildings_100" type="MeshInstance" parent="Buildings"]
+transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 38.3658, -0.0127664, 41.6079 )
+mesh = ExtResource( 1 )
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+material/4 = null
+
+[node name="modularBuildings_101" type="MeshInstance" parent="Buildings"]
+transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 34.5033, -0.0127664, 41.6079 )
+mesh = ExtResource( 1 )
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+material/4 = null
+
+[node name="modularBuildings_102" type="MeshInstance" parent="Buildings"]
+transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 43.5767, -0.0127664, 45.6118 )
+mesh = ExtResource( 1 )
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+material/4 = null
+
+[node name="modularBuildings_103" type="MeshInstance" parent="Buildings"]
+transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 38.6116, -0.0127664, 45.6118 )
+mesh = ExtResource( 1 )
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+material/4 = null
+
+[node name="modularBuildings_111" type="MeshInstance" parent="Buildings"]
+transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 21.8954, -0.0127664, 45.4795 )
+mesh = ExtResource( 1 )
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+material/4 = null
+
+[node name="modularBuildings_110" type="MeshInstance" parent="Buildings"]
+transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 25.9791, -0.0127664, 45.4795 )
+mesh = ExtResource( 1 )
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+material/4 = null
+
+[node name="modularBuildings_109" type="MeshInstance" parent="Buildings"]
+transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 25.9791, -0.0127664, 41.3999 )
+mesh = ExtResource( 1 )
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+material/4 = null
+
+[node name="modularBuildings_108" type="MeshInstance" parent="Buildings"]
+transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 25.9791, -0.0127664, 37.4547 )
+mesh = ExtResource( 1 )
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+material/4 = null
+
+[node name="modularBuildings_107" type="MeshInstance" parent="Buildings"]
+transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 30.1807, -0.0127664, 37.4547 )
+mesh = ExtResource( 1 )
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+material/4 = null
+
+[node name="modularBuildings_106" type="MeshInstance" parent="Buildings"]
+transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 30.1807, -0.0127664, 41.5176 )
+mesh = ExtResource( 1 )
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+material/4 = null
+
+[node name="modularBuildings_105" type="MeshInstance" parent="Buildings"]
+transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 30.1807, -0.0127664, 45.6118 )
+mesh = ExtResource( 1 )
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+material/4 = null
+
+[node name="modularBuildings_104" type="MeshInstance" parent="Buildings"]
+transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 34.66, -0.0127664, 45.6118 )
+mesh = ExtResource( 1 )
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+material/4 = null
