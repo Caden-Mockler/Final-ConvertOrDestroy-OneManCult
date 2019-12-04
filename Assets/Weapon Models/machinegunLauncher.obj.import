@@ -2,14 +2,14 @@
 
 importer="wavefront_obj"
 type="Mesh"
-path="res://.import/machinegunLauncher.obj-7927a0b03afea5e7a1dec3a592019641.mesh"
+path="res://.import/machinegunLauncher.obj-5325122bcd20beb56ba6d3b71c643a95.mesh"
 
 [deps]
 
-files=[ "res://.import/machinegunLauncher.obj-7927a0b03afea5e7a1dec3a592019641.mesh" ]
+files=[ "res://.import/machinegunLauncher.obj-5325122bcd20beb56ba6d3b71c643a95.mesh" ]
 
-source_file="res://Weapon Models/machinegunLauncher.obj"
-dest_files=[ "res://.import/machinegunLauncher.obj-7927a0b03afea5e7a1dec3a592019641.mesh", "res://.import/machinegunLauncher.obj-7927a0b03afea5e7a1dec3a592019641.mesh" ]
+source_file="res://Assets/Weapon Models/machinegunLauncher.obj"
+dest_files=[ "res://.import/machinegunLauncher.obj-5325122bcd20beb56ba6d3b71c643a95.mesh", "res://.import/machinegunLauncher.obj-5325122bcd20beb56ba6d3b71c643a95.mesh" ]
 
 [params]
 

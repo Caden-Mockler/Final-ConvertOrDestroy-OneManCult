@@ -2,14 +2,14 @@
 
 importer="wavefront_obj"
 type="Mesh"
-path="res://.import/ammo_pistol.obj-fb1f347a7bfa35431f348e3f788f3889.mesh"
+path="res://.import/ammo_pistol.obj-c954e2947f62b00123bf683e0c192745.mesh"
 
 [deps]
 
-files=[ "res://.import/ammo_pistol.obj-fb1f347a7bfa35431f348e3f788f3889.mesh" ]
+files=[ "res://.import/ammo_pistol.obj-c954e2947f62b00123bf683e0c192745.mesh" ]
 
-source_file="res://Weapon Models/ammo_pistol.obj"
-dest_files=[ "res://.import/ammo_pistol.obj-fb1f347a7bfa35431f348e3f788f3889.mesh", "res://.import/ammo_pistol.obj-fb1f347a7bfa35431f348e3f788f3889.mesh" ]
+source_file="res://Assets/Weapon Models/ammo_pistol.obj"
+dest_files=[ "res://.import/ammo_pistol.obj-c954e2947f62b00123bf683e0c192745.mesh", "res://.import/ammo_pistol.obj-c954e2947f62b00123bf683e0c192745.mesh" ]
 
 [params]
 

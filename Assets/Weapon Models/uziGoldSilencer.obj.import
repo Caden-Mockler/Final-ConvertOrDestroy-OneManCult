@@ -2,14 +2,14 @@
 
 importer="wavefront_obj"
 type="Mesh"
-path="res://.import/uziGoldSilencer.obj-8d2fc6484c7bcc81851ad008e5da3e72.mesh"
+path="res://.import/uziGoldSilencer.obj-9a13bc6696d98ffacded975a995f55f8.mesh"
 
 [deps]
 
-files=[ "res://.import/uziGoldSilencer.obj-8d2fc6484c7bcc81851ad008e5da3e72.mesh" ]
+files=[ "res://.import/uziGoldSilencer.obj-9a13bc6696d98ffacded975a995f55f8.mesh" ]
 
-source_file="res://Weapon Models/uziGoldSilencer.obj"
-dest_files=[ "res://.import/uziGoldSilencer.obj-8d2fc6484c7bcc81851ad008e5da3e72.mesh", "res://.import/uziGoldSilencer.obj-8d2fc6484c7bcc81851ad008e5da3e72.mesh" ]
+source_file="res://Assets/Weapon Models/uziGoldSilencer.obj"
+dest_files=[ "res://.import/uziGoldSilencer.obj-9a13bc6696d98ffacded975a995f55f8.mesh", "res://.import/uziGoldSilencer.obj-9a13bc6696d98ffacded975a995f55f8.mesh" ]
 
 [params]
 

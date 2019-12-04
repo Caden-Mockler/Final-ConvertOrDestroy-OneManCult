@@ -2,14 +2,14 @@
 
 importer="wavefront_obj"
 type="Mesh"
-path="res://.import/pistolSilencer.obj-7251bc1a0376b59bdfd49b0b465f4aeb.mesh"
+path="res://.import/pistolSilencer.obj-b78e5c9f70d1764b28a7a00f5c7e4376.mesh"
 
 [deps]
 
-files=[ "res://.import/pistolSilencer.obj-7251bc1a0376b59bdfd49b0b465f4aeb.mesh" ]
+files=[ "res://.import/pistolSilencer.obj-b78e5c9f70d1764b28a7a00f5c7e4376.mesh" ]
 
-source_file="res://Weapon Models/pistolSilencer.obj"
-dest_files=[ "res://.import/pistolSilencer.obj-7251bc1a0376b59bdfd49b0b465f4aeb.mesh", "res://.import/pistolSilencer.obj-7251bc1a0376b59bdfd49b0b465f4aeb.mesh" ]
+source_file="res://Assets/Weapon Models/pistolSilencer.obj"
+dest_files=[ "res://.import/pistolSilencer.obj-b78e5c9f70d1764b28a7a00f5c7e4376.mesh", "res://.import/pistolSilencer.obj-b78e5c9f70d1764b28a7a00f5c7e4376.mesh" ]
 
 [params]
 

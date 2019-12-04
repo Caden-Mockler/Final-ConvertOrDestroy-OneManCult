@@ -2,14 +2,14 @@
 
 importer="wavefront_obj"
 type="Mesh"
-path="res://.import/knifeRound_smooth.obj-a2d62d18ace8ce0763a680205c2ec3b7.mesh"
+path="res://.import/knifeRound_smooth.obj-d32a2b5a43e3477d3f744f2130ca361d.mesh"
 
 [deps]
 
-files=[ "res://.import/knifeRound_smooth.obj-a2d62d18ace8ce0763a680205c2ec3b7.mesh" ]
+files=[ "res://.import/knifeRound_smooth.obj-d32a2b5a43e3477d3f744f2130ca361d.mesh" ]
 
-source_file="res://Weapon Models/knifeRound_smooth.obj"
-dest_files=[ "res://.import/knifeRound_smooth.obj-a2d62d18ace8ce0763a680205c2ec3b7.mesh", "res://.import/knifeRound_smooth.obj-a2d62d18ace8ce0763a680205c2ec3b7.mesh" ]
+source_file="res://Assets/Weapon Models/knifeRound_smooth.obj"
+dest_files=[ "res://.import/knifeRound_smooth.obj-d32a2b5a43e3477d3f744f2130ca361d.mesh", "res://.import/knifeRound_smooth.obj-d32a2b5a43e3477d3f744f2130ca361d.mesh" ]
 
 [params]
 
