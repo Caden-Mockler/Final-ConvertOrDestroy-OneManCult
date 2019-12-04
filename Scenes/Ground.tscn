@@ -1,164 +1,62 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=12 format=2]
 
-[ext_resource path="res://Assets/Building Textures/modularBuildings_069.obj" type="ArrayMesh" id=1]
+[ext_resource path="res://Scenes/SmallBuilding1.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Assets/Building Textures/modularBuildings_010.obj" type="ArrayMesh" id=2]
-[ext_resource path="res://Assets/Building Textures/modularBuildings_054.obj" type="ArrayMesh" id=3]
+[ext_resource path="res://Assets/Building Textures/modularBuildings_069.obj" type="ArrayMesh" id=3]
+[ext_resource path="res://Scenes/SmallBuilding3.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/Onning.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/Skyscraper1.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/SmallBuilding2.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scenes/PrePlacedBuildings.tscn" type="PackedScene" id=8]
+
+[sub_resource type="BoxShape" id=3]
+extents = Vector3( 50, 0, 50 )
 
 [sub_resource type="PlaneMesh" id=1]
 size = Vector2( 100, 100 )
 
 [sub_resource type="SpatialMaterial" id=2]
-albedo_color = Color( 0.313726, 0.513726, 0.0941176, 1 )
-
-[sub_resource type="BoxShape" id=3]
-extents = Vector3( 50, 0, 50 )
+albedo_color = Color( 0.329412, 0.270588, 0.517647, 1 )
 
 [node name="Spatial" type="Spatial"]
 
 [node name="Ground" type="StaticBody" parent="."]
-editor/display_folded = true
+
+[node name="CollisionShape" type="CollisionShape" parent="Ground"]
+shape = SubResource( 3 )
 
 [node name="MeshInstance" type="MeshInstance" parent="Ground"]
 mesh = SubResource( 1 )
 material/0 = SubResource( 2 )
 
-[node name="CollisionShape" type="CollisionShape" parent="."]
-shape = SubResource( 3 )
-
 [node name="Camera" type="Camera" parent="."]
 transform = Transform( -0.22843, 0.371234, -0.900003, 0.0269303, 0.926501, 0.375328, 0.973188, 0.0614988, -0.221638, 9.83729, 21.0796, 21.0349 )
 
 [node name="Buildings" type="Node" parent="."]
-editor/display_folded = true
 
-[node name="modularBuildings_112" type="MeshInstance" parent="Buildings"]
-transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 21.8954, -0.0127664, 41.4595 )
-mesh = ExtResource( 1 )
-material/0 = null
-material/1 = null
-material/2 = null
-material/3 = null
-material/4 = null
+[node name="SmallBuilding" parent="Buildings" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 45.537, -0.714459, 29.3791 )
 
-[node name="modularBuildings_113" type="MeshInstance" parent="Buildings"]
-transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 21.8954, -0.0127664, 37.3021 )
-mesh = ExtResource( 1 )
-material/0 = null
-material/1 = null
-material/2 = null
-material/3 = null
-material/4 = null
+[node name="SmallBuilding14" parent="Buildings" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 45.403, -0.817623, 2.42222 )
 
-[node name="modularBuildings_114" type="MeshInstance" parent="Buildings"]
-transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 18.1264, -0.0127664, 37.3021 )
-mesh = ExtResource( 1 )
-material/0 = null
-material/1 = null
-material/2 = null
-material/3 = null
-material/4 = null
+[node name="SmallBuilding104" parent="Buildings" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 18.3105, -0.817623, -30.9109 )
 
-[node name="modularBuildings_115" type="MeshInstance" parent="Buildings"]
-transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 18.1264, -0.0127664, 41.3571 )
-mesh = ExtResource( 1 )
-material/0 = null
-material/1 = null
-material/2 = null
-material/3 = null
-material/4 = null
+[node name="SmallBuilding6" parent="Buildings" instance=ExtResource( 1 )]
+transform = Transform( -0.999998, 0, -0.00221017, 0, 1, 0, 0.00221017, 0, -0.999998, 37.3066, -0.773692, 39.4401 )
 
-[node name="modularBuildings_116" type="MeshInstance" parent="Buildings"]
-transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 18.1287, -0.0127664, 45.3951 )
-mesh = ExtResource( 1 )
-material/0 = null
-material/1 = null
-material/2 = null
-material/3 = null
-material/4 = null
+[node name="SmallBuilding103" parent="Buildings" instance=ExtResource( 1 )]
+transform = Transform( -0.999998, 0, -0.00221017, 0, 1, 0, 0.00221017, 0, -0.999998, 10.2141, -0.773692, 6.10705 )
 
-[node name="modularBuildings_117" type="MeshInstance" parent="Buildings"]
-transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 13.3827, -0.0518594, 45.3715 )
-mesh = ExtResource( 1 )
-material/0 = null
-material/1 = null
-material/2 = null
-material/3 = null
-material/4 = null
+[node name="SmallBuilding9" parent="Buildings" instance=ExtResource( 1 )]
+transform = Transform( -0.999998, 0, -0.00221017, 0, 1, 0, 0.00221017, 0, -0.999998, 37.3066, -0.773692, 23.4736 )
 
-[node name="modularBuildings_118" type="MeshInstance" parent="Buildings"]
-transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 14.1297, -0.0127664, 41.3079 )
-mesh = ExtResource( 1 )
-material/0 = null
-material/1 = null
-material/2 = null
-material/3 = null
-material/4 = null
+[node name="SmallBuilding102" parent="Buildings" instance=ExtResource( 1 )]
+transform = Transform( -0.999998, 0, -0.00221017, 0, 1, 0, 0.00221017, 0, -0.999998, 10.2141, -0.773692, -9.85952 )
 
-[node name="modularBuildings_119" type="MeshInstance" parent="Buildings"]
-transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 14.1297, -0.0127664, 37.3108 )
-mesh = ExtResource( 1 )
-material/0 = null
-material/1 = null
-material/2 = null
-material/3 = null
-material/4 = null
-
-[node name="modularBuildings_120" type="MeshInstance" parent="Buildings"]
-transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 10.2395, -0.0127664, 37.3108 )
-mesh = ExtResource( 1 )
-material/0 = null
-material/1 = null
-material/2 = null
-material/3 = null
-material/4 = null
-
-[node name="modularBuildings_121" type="MeshInstance" parent="Buildings"]
-transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 10.2395, -0.0127664, 41.3382 )
-mesh = ExtResource( 1 )
-material/0 = null
-material/1 = null
-material/2 = null
-material/3 = null
-material/4 = null
-
-[node name="modularBuildings_122" type="MeshInstance" parent="Buildings"]
-transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 9.16994, 0.145666, 45.6862 )
-mesh = ExtResource( 1 )
-material/0 = null
-material/1 = null
-material/2 = null
-material/3 = null
-material/4 = null
-
-[node name="modularBuildings_123" type="MeshInstance" parent="Buildings"]
-transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 4.65109, 0.145666, 45.6862 )
-mesh = ExtResource( 1 )
-material/0 = null
-material/1 = null
-material/2 = null
-material/3 = null
-material/4 = null
-
-[node name="modularBuildings_124" type="MeshInstance" parent="Buildings"]
-transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 4.65109, 0.145666, 41.2397 )
-mesh = ExtResource( 1 )
-material/0 = null
-material/1 = null
-material/2 = null
-material/3 = null
-material/4 = null
-
-[node name="modularBuildings_125" type="MeshInstance" parent="Buildings"]
-transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 4.65109, 0.145666, 37.5942 )
-mesh = ExtResource( 1 )
-material/0 = null
-material/1 = null
-material/2 = null
-material/3 = null
-material/4 = null
-
-[node name="modularBuildings_010" type="MeshInstance" parent="Buildings"]
-transform = Transform( 3, 0, 0, 0, 1, 0, 0, 0, 3, 44.6364, 1.87602, 37.8368 )
+[node name="Onning" type="MeshInstance" parent="Buildings"]
+transform = Transform( 3, 0, 0, 0, 1, 0, 0, 0, 3, 44.7576, 1.87602, 37.8171 )
 mesh = ExtResource( 2 )
 material/0 = null
 material/1 = null
@@ -185,566 +83,724 @@ material/21 = null
 material/22 = null
 material/23 = null
 
-[node name="modularBuildings_054" type="MeshInstance" parent="Buildings"]
-transform = Transform( 4, 0, 0, 0, 10, 0, 0, 0, 4, 44.6508, -0.00229037, 34.0539 )
-mesh = ExtResource( 3 )
+[node name="Onning10" type="MeshInstance" parent="Buildings"]
+transform = Transform( 3, 0, 0, 0, 1, 0, 0, 0, 3, 17.6651, 1.87602, 4.48405 )
+mesh = ExtResource( 2 )
 material/0 = null
 material/1 = null
 material/2 = null
 material/3 = null
 material/4 = null
 material/5 = null
+material/6 = null
+material/7 = null
+material/8 = null
+material/9 = null
+material/10 = null
+material/11 = null
+material/12 = null
+material/13 = null
+material/14 = null
+material/15 = null
+material/16 = null
+material/17 = null
+material/18 = null
+material/19 = null
+material/20 = null
+material/21 = null
+material/22 = null
+material/23 = null
 
-[node name="modularBuildings_055" type="MeshInstance" parent="Buildings"]
-transform = Transform( 4, 0, 0, 0, 10, 0, 0, 0, 4, 44.6508, -0.00229037, 20.9038 )
+[node name="SmallBuilding5" type="MeshInstance" parent="Buildings"]
+transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 44.7851, -0.0127654, 37.7965 )
 mesh = ExtResource( 3 )
 material/0 = null
 material/1 = null
 material/2 = null
 material/3 = null
 material/4 = null
-material/5 = null
 
-[node name="modularBuildings_056" type="MeshInstance" parent="Buildings"]
-transform = Transform( 4, 0, 0, 0, 10, 0, 0, 0, 4, 26.6107, -0.00229037, 20.9038 )
+[node name="SmallBuilding100" type="MeshInstance" parent="Buildings"]
+transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 17.6926, -0.0127654, 4.46344 )
 mesh = ExtResource( 3 )
 material/0 = null
 material/1 = null
 material/2 = null
 material/3 = null
 material/4 = null
-material/5 = null
 
-[node name="modularBuildings_062" type="MeshInstance" parent="Buildings"]
-transform = Transform( 4, 0, 0, 0, 10, 0, 0, 0, 4, 19.7869, -0.00229037, 20.9038 )
+[node name="SmallBuilding4" type="MeshInstance" parent="Buildings"]
+transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 44.8657, -0.0127664, 41.4289 )
 mesh = ExtResource( 3 )
 material/0 = null
 material/1 = null
 material/2 = null
 material/3 = null
 material/4 = null
-material/5 = null
 
-[node name="modularBuildings_063" type="MeshInstance" parent="Buildings"]
-transform = Transform( 4, 0, 0, 0, 10, 0, 0, 0, 4, 19.7869, -0.00229037, 26.8653 )
+[node name="SmallBuilding101" type="MeshInstance" parent="Buildings"]
+transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 17.7732, -0.0127664, 8.09583 )
 mesh = ExtResource( 3 )
 material/0 = null
 material/1 = null
 material/2 = null
 material/3 = null
 material/4 = null
-material/5 = null
 
-[node name="modularBuildings_064" type="MeshInstance" parent="Buildings"]
-transform = Transform( 4, 0, 0, 0, 10, 0, 0, 0, 4, 19.7869, -0.00229037, 33.4934 )
+[node name="SmallBuilding96" type="MeshInstance" parent="Buildings"]
+transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, -10.1868, -0.0127664, 41.4289 )
 mesh = ExtResource( 3 )
 material/0 = null
 material/1 = null
 material/2 = null
 material/3 = null
 material/4 = null
-material/5 = null
 
-[node name="modularBuildings_065" type="MeshInstance" parent="Buildings"]
-transform = Transform( 4, 0, 0, 0, 10, 0, 0, 0, 4, 12.6597, -0.00229037, 33.4934 )
+[node name="SmallBuilding106" type="MeshInstance" parent="Buildings"]
+transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, -37.2793, -0.0127664, 8.09583 )
 mesh = ExtResource( 3 )
 material/0 = null
 material/1 = null
 material/2 = null
 material/3 = null
 material/4 = null
-material/5 = null
 
-[node name="modularBuildings_077" type="MeshInstance" parent="Buildings"]
-transform = Transform( 4, 0, 0, 0, 10, 0, 0, 0, 4, 6.45867, -0.00229037, 33.4934 )
+[node name="SmallBuilding15" type="MeshInstance" parent="Buildings"]
+transform = Transform( 4, 0, 0, 0, 3.2, 0, 0, 0, 4, 45.0745, -0.0127664, -3.93696 )
 mesh = ExtResource( 3 )
 material/0 = null
 material/1 = null
 material/2 = null
 material/3 = null
 material/4 = null
-material/5 = null
 
-[node name="modularBuildings_078" type="MeshInstance" parent="Buildings"]
-transform = Transform( 4, 0, 0, 0, 10, 0, 0, 0, 4, 6.45867, -0.00229037, 26.3733 )
+[node name="SmallBuilding105" type="MeshInstance" parent="Buildings"]
+transform = Transform( 4, 0, 0, 0, 3.2, 0, 0, 0, 4, 17.9821, -0.0127664, -37.2701 )
 mesh = ExtResource( 3 )
 material/0 = null
 material/1 = null
 material/2 = null
 material/3 = null
 material/4 = null
-material/5 = null
 
-[node name="modularBuildings_079" type="MeshInstance" parent="Buildings"]
-transform = Transform( 4, 0, 0, 0, 10, 0, 0, 0, 4, 6.45867, -0.00229037, 20.1245 )
+[node name="SmallBuilding98" type="MeshInstance" parent="Buildings"]
+transform = Transform( 4, 0, 0, 0, 3.2, 0, 0, 0, 4, -9.97787, -0.0127664, -3.93696 )
 mesh = ExtResource( 3 )
 material/0 = null
 material/1 = null
 material/2 = null
 material/3 = null
 material/4 = null
-material/5 = null
 
-[node name="modularBuildings_080" type="MeshInstance" parent="Buildings"]
-transform = Transform( 4, 0, 0, 0, 10, 0, 0, 0, 4, 6.45867, -0.00229037, 14.7704 )
+[node name="SmallBuilding28" type="MeshInstance" parent="Buildings"]
+transform = Transform( 4, 0, 0, 0, 3.2, 0, 0, 0, 4, 18.4841, -0.0127664, -3.93696 )
 mesh = ExtResource( 3 )
 material/0 = null
 material/1 = null
 material/2 = null
 material/3 = null
 material/4 = null
-material/5 = null
 
-[node name="modularBuildings_081" type="MeshInstance" parent="Buildings"]
-transform = Transform( 4, 0, 0, 0, 10, 0, 0, 0, 4, 6.45867, -0.00229037, 9.3367 )
+[node name="SmallBuilding97" type="MeshInstance" parent="Buildings"]
+transform = Transform( 4, 0, 0, 0, 3.2, 0, 0, 0, 4, -36.5684, -0.0127664, -3.93696 )
 mesh = ExtResource( 3 )
 material/0 = null
 material/1 = null
 material/2 = null
 material/3 = null
 material/4 = null
-material/5 = null
 
-[node name="modularBuildings_082" type="MeshInstance" parent="Buildings"]
-transform = Transform( 4, 0, 0, 0, 10, 0, 0, 0, 4, 0.126664, -0.00229037, 9.3367 )
+[node name="SmallBuilding29" type="MeshInstance" parent="Buildings"]
+transform = Transform( -3.99757, 0, 0.139318, 0, 3.2, 0, -0.139318, 0, -3.99757, 36.5812, -0.0668445, -20.8796 )
 mesh = ExtResource( 3 )
 material/0 = null
 material/1 = null
 material/2 = null
 material/3 = null
 material/4 = null
-material/5 = null
 
-[node name="modularBuildings_083" type="MeshInstance" parent="Buildings"]
-transform = Transform( 4, 0, 0, 0, 10, 0, 0, 0, 4, 0.126664, -0.00229037, 14.8872 )
+[node name="SmallBuilding99" type="MeshInstance" parent="Buildings"]
+transform = Transform( -3.99757, 0, 0.139318, 0, 3.2, 0, -0.139318, 0, -3.99757, -18.4713, -0.0668445, -20.8796 )
 mesh = ExtResource( 3 )
 material/0 = null
 material/1 = null
 material/2 = null
 material/3 = null
 material/4 = null
-material/5 = null
 
-[node name="modularBuildings_084" type="MeshInstance" parent="Buildings"]
-transform = Transform( 4, 0, 0, 0, 10, 0, 0, 0, 4, 0.126664, -0.00229037, 20.3581 )
+[node name="SmallBuilding30" type="MeshInstance" parent="Buildings"]
+transform = Transform( 4, 0, 0, 0, 3.2, 0, 0, 0, 4, 28.9723, -0.0127664, -3.93696 )
 mesh = ExtResource( 3 )
 material/0 = null
 material/1 = null
 material/2 = null
 material/3 = null
 material/4 = null
-material/5 = null
 
-[node name="modularBuildings_085" type="MeshInstance" parent="Buildings"]
-transform = Transform( 4, 0, 0, 0, 10, 0, 0, 0, 4, 0.126664, -0.00229037, 26.756 )
+[node name="SmallBuilding31" type="MeshInstance" parent="Buildings"]
+transform = Transform( 4, 0, 0, 0, 3.2, 0, 0, 0, 4, 45.4836, -0.0232196, -39.191 )
 mesh = ExtResource( 3 )
 material/0 = null
 material/1 = null
 material/2 = null
 material/3 = null
 material/4 = null
-material/5 = null
 
-[node name="modularBuildings_086" type="MeshInstance" parent="Buildings"]
-transform = Transform( 4, 0, 0, 0, 10, 0, 0, 0, 4, 0.126664, -0.00229037, 33.2872 )
+[node name="SmallBuilding32" type="MeshInstance" parent="Buildings"]
+transform = Transform( 4, 0, 0, 0, 3.2, 0, 0, 0, 4, 45.2869, -0.0127664, -31.9814 )
 mesh = ExtResource( 3 )
 material/0 = null
 material/1 = null
 material/2 = null
 material/3 = null
 material/4 = null
-material/5 = null
 
-[node name="modularBuildings_087" type="MeshInstance" parent="Buildings"]
-transform = Transform( 4, 0, 0, 0, 10, 0, 0, 0, 4, -6.05495, -0.00229037, 33.2872 )
-mesh = ExtResource( 3 )
-material/0 = null
-material/1 = null
-material/2 = null
-material/3 = null
-material/4 = null
-material/5 = null
+[node name="SmallBuilding3" parent="Buildings" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 45.8011, -0.298233, 27.2984 )
 
-[node name="modularBuildings_088" type="MeshInstance" parent="Buildings"]
-transform = Transform( 4, 0, 0, 0, 10, 0, 0, 0, 4, -6.05495, -0.00229037, 26.1657 )
-mesh = ExtResource( 3 )
-material/0 = null
-material/1 = null
-material/2 = null
-material/3 = null
-material/4 = null
-material/5 = null
+[node name="SmallBuilding34" parent="Buildings" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 67.1876, -0.298233, 27.2984 )
 
-[node name="modularBuildings_089" type="MeshInstance" parent="Buildings"]
-transform = Transform( 4, 0, 0, 0, 10, 0, 0, 0, 4, -6.05495, -0.00229037, 19.8717 )
-mesh = ExtResource( 3 )
-material/0 = null
-material/1 = null
-material/2 = null
-material/3 = null
-material/4 = null
-material/5 = null
+[node name="SmallBuilding69" parent="Buildings" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 87.306, -0.298233, 27.2984 )
 
-[node name="modularBuildings_090" type="MeshInstance" parent="Buildings"]
-transform = Transform( 4, 0, 0, 0, 10, 0, 0, 0, 4, -6.05495, -0.00229037, 14.625 )
-mesh = ExtResource( 3 )
-material/0 = null
-material/1 = null
-material/2 = null
-material/3 = null
-material/4 = null
-material/5 = null
+[node name="SmallBuilding79" parent="Buildings" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 25.3631, -3.84657, 19.6707 )
 
-[node name="modularBuildings_091" type="MeshInstance" parent="Buildings"]
-transform = Transform( 4, 0, 0, 0, 10, 0, 0, 0, 4, -6.05495, -0.00229037, 9.26686 )
-mesh = ExtResource( 3 )
-material/0 = null
-material/1 = null
-material/2 = null
-material/3 = null
-material/4 = null
-material/5 = null
+[node name="SmallBuilding20" parent="Buildings" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 45.5047, -0.298233, -22.7037 )
 
-[node name="modularBuildings_092" type="MeshInstance" parent="Buildings"]
-transform = Transform( 4, 0, 0, 0, 10, 0, 0, 0, 4, -11.8351, -0.00229037, 9.26686 )
-mesh = ExtResource( 3 )
-material/0 = null
-material/1 = null
-material/2 = null
-material/3 = null
-material/4 = null
-material/5 = null
+[node name="SmallBuilding49" parent="Buildings" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 66.8913, -0.298233, -22.7037 )
 
-[node name="modularBuildings_093" type="MeshInstance" parent="Buildings"]
-transform = Transform( 4, 0, 0, 0, 10, 0, 0, 0, 4, -11.8351, -0.00229037, 14.9158 )
-mesh = ExtResource( 3 )
-material/0 = null
-material/1 = null
-material/2 = null
-material/3 = null
-material/4 = null
-material/5 = null
+[node name="SmallBuilding65" parent="Buildings" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 87.0097, -0.298233, -22.7037 )
 
-[node name="modularBuildings_094" type="MeshInstance" parent="Buildings"]
-transform = Transform( 4, 0, 0, 0, 10, 0, 0, 0, 4, -11.8351, -0.00229037, 20.1664 )
-mesh = ExtResource( 3 )
-material/0 = null
-material/1 = null
-material/2 = null
-material/3 = null
-material/4 = null
-material/5 = null
+[node name="SmallBuilding75" parent="Buildings" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 25.0668, -3.84657, -30.3313 )
 
-[node name="modularBuildings_095" type="MeshInstance" parent="Buildings"]
-transform = Transform( 4, 0, 0, 0, 10, 0, 0, 0, 4, -11.8351, -0.00229037, 26.3447 )
-mesh = ExtResource( 3 )
-material/0 = null
-material/1 = null
-material/2 = null
-material/3 = null
-material/4 = null
-material/5 = null
+[node name="SmallBuilding21" parent="Buildings" instance=ExtResource( 4 )]
+transform = Transform( -0.00870322, 0, -0.999978, 0, 2, 0, 1.29997, 0, -0.00669479, 35.4592, -0.625817, 1.06346 )
 
-[node name="modularBuildings_096" type="MeshInstance" parent="Buildings"]
-transform = Transform( 4, 0, 0, 0, 10, 0, 0, 0, 4, -11.8351, -0.00229037, 33.2434 )
-mesh = ExtResource( 3 )
-material/0 = null
-material/1 = null
-material/2 = null
-material/3 = null
-material/4 = null
-material/5 = null
+[node name="SmallBuilding52" parent="Buildings" instance=ExtResource( 4 )]
+transform = Transform( -0.00870322, 0, -0.999978, 0, 2, 0, 1.29997, 0, -0.00669479, 56.8458, -0.625817, 1.06346 )
 
-[node name="modularBuildings_066" type="MeshInstance" parent="Buildings"]
-transform = Transform( 4, 0, 0, 0, 10, 0, 0, 0, 4, 12.6597, -0.00229037, 27.2871 )
-mesh = ExtResource( 3 )
-material/0 = null
-material/1 = null
-material/2 = null
-material/3 = null
-material/4 = null
-material/5 = null
+[node name="SmallBuilding72" parent="Buildings" instance=ExtResource( 4 )]
+transform = Transform( -0.00870322, 0, -0.999978, 0, 2, 0, 1.29997, 0, -0.00669479, 76.9642, -0.625817, 1.06346 )
 
-[node name="modularBuildings_067" type="MeshInstance" parent="Buildings"]
-transform = Transform( 4, 0, 0, 0, 10, 0, 0, 0, 4, 12.6597, -0.00229037, 20.4285 )
-mesh = ExtResource( 3 )
-material/0 = null
-material/1 = null
-material/2 = null
-material/3 = null
-material/4 = null
-material/5 = null
+[node name="SmallBuilding93" parent="Buildings" instance=ExtResource( 4 )]
+transform = Transform( -0.00870322, 0, -0.999978, 0, 2, 0, 1.29997, 0, -0.00669479, 15.0213, -4.17415, -6.56421 )
 
-[node name="modularBuildings_068" type="MeshInstance" parent="Buildings"]
-transform = Transform( 4, 0, 0, 0, 10, 0, 0, 0, 4, 12.6597, -0.00229037, 14.9134 )
-mesh = ExtResource( 3 )
-material/0 = null
-material/1 = null
-material/2 = null
-material/3 = null
-material/4 = null
-material/5 = null
+[node name="SmallBuilding22" parent="Buildings" instance=ExtResource( 4 )]
+transform = Transform( -0.99986, 0, 0.0167042, 0, 1, 0, -0.0167042, 0, -0.99986, 36.4767, -0.298233, -22.1321 )
 
-[node name="modularBuildings_073" type="MeshInstance" parent="Buildings"]
-transform = Transform( 4, 0, 0, 0, 10, 0, 0, 0, 4, 12.6597, -0.00229037, 9.37246 )
-mesh = ExtResource( 3 )
-material/0 = null
-material/1 = null
-material/2 = null
-material/3 = null
-material/4 = null
-material/5 = null
+[node name="SmallBuilding43" parent="Buildings" instance=ExtResource( 4 )]
+transform = Transform( -0.99986, 0, 0.0167042, 0, 1, 0, -0.0167042, 0, -0.99986, 57.8633, -0.298233, -22.1321 )
 
-[node name="modularBuildings_074" type="MeshInstance" parent="Buildings"]
-transform = Transform( 4, 0, 0, 0, 10, 0, 0, 0, 4, 18.4044, -0.00229037, 9.37246 )
-mesh = ExtResource( 3 )
-material/0 = null
-material/1 = null
-material/2 = null
-material/3 = null
-material/4 = null
-material/5 = null
+[node name="SmallBuilding56" parent="Buildings" instance=ExtResource( 4 )]
+transform = Transform( -0.99986, 0, 0.0167042, 0, 1, 0, -0.0167042, 0, -0.99986, 77.9817, -0.298233, -22.1321 )
 
-[node name="modularBuildings_075" type="MeshInstance" parent="Buildings"]
-transform = Transform( 4, 0, 0, 0, 10, 0, 0, 0, 4, 25.4994, -0.00229037, 9.37246 )
-mesh = ExtResource( 3 )
-material/0 = null
-material/1 = null
-material/2 = null
-material/3 = null
-material/4 = null
-material/5 = null
+[node name="SmallBuilding83" parent="Buildings" instance=ExtResource( 4 )]
+transform = Transform( -0.99986, 0, 0.0167042, 0, 1, 0, -0.0167042, 0, -0.99986, 16.0388, -3.84657, -29.7597 )
 
-[node name="modularBuildings_076" type="MeshInstance" parent="Buildings"]
-transform = Transform( 4, 0, 0, 0, 10, 0, 0, 0, 4, 33.2846, -0.00229037, 9.37246 )
-mesh = ExtResource( 3 )
-material/0 = null
-material/1 = null
-material/2 = null
-material/3 = null
-material/4 = null
-material/5 = null
+[node name="SmallBuilding23" parent="Buildings" instance=ExtResource( 4 )]
+editor/display_folded = true
+transform = Transform( 1.2, 0, 0, 0, 1.5, 0, 0, 0, 1, 45.4115, -0.298235, -30.7248 )
 
-[node name="modularBuildings_070" type="MeshInstance" parent="Buildings"]
-transform = Transform( 4, 0, 0, 0, 10, 0, 0, 0, 4, 18.6789, -0.00229037, 14.9134 )
-mesh = ExtResource( 3 )
-material/0 = null
-material/1 = null
-material/2 = null
-material/3 = null
-material/4 = null
-material/5 = null
+[node name="Onning" parent="Buildings/SmallBuilding23" instance=ExtResource( 5 )]
+transform = Transform( 1.2, 0, 0, 0, 1, 0, 0, 0, 0.9, 0.416286, 1.47999, 0.155506 )
 
-[node name="modularBuildings_071" type="MeshInstance" parent="Buildings"]
-transform = Transform( 4, 0, 0, 0, 10, 0, 0, 0, 4, 25.2284, -0.00229037, 14.9134 )
-mesh = ExtResource( 3 )
-material/0 = null
-material/1 = null
-material/2 = null
-material/3 = null
-material/4 = null
-material/5 = null
+[node name="SmallBuilding39" parent="Buildings" instance=ExtResource( 4 )]
+editor/display_folded = true
+transform = Transform( 1.2, 0, 0, 0, 1.5, 0, 0, 0, 1, 66.798, -0.298235, -30.7248 )
 
-[node name="modularBuildings_072" type="MeshInstance" parent="Buildings"]
-transform = Transform( 4, 0, 0, 0, 10, 0, 0, 0, 4, 32.1023, -0.00229037, 14.9134 )
-mesh = ExtResource( 3 )
-material/0 = null
-material/1 = null
-material/2 = null
-material/3 = null
-material/4 = null
-material/5 = null
+[node name="Onning" parent="Buildings/SmallBuilding39" instance=ExtResource( 5 )]
+transform = Transform( 1.2, 0, 0, 0, 1, 0, 0, 0, 0.9, 0.416286, 1.47999, 0.155506 )
 
-[node name="modularBuildings_057" type="MeshInstance" parent="Buildings"]
-transform = Transform( 4, 0, 0, 0, 10, 0, 0, 0, 4, 26.6107, -0.00229037, 26.9423 )
-mesh = ExtResource( 3 )
-material/0 = null
-material/1 = null
-material/2 = null
-material/3 = null
-material/4 = null
-material/5 = null
+[node name="SmallBuilding55" parent="Buildings" instance=ExtResource( 4 )]
+editor/display_folded = true
+transform = Transform( 1.2, 0, 0, 0, 1.5, 0, 0, 0, 1, 86.9164, -0.298235, -30.7248 )
 
-[node name="modularBuildings_058" type="MeshInstance" parent="Buildings"]
-transform = Transform( 4, 0, 0, 0, 10, 0, 0, 0, 4, 26.6107, -0.00229037, 32.3206 )
-mesh = ExtResource( 3 )
-material/0 = null
-material/1 = null
-material/2 = null
-material/3 = null
-material/4 = null
-material/5 = null
+[node name="Onning" parent="Buildings/SmallBuilding55" instance=ExtResource( 5 )]
+transform = Transform( 1.2, 0, 0, 0, 1, 0, 0, 0, 0.9, 0.416286, 1.47999, 0.155506 )
 
-[node name="modularBuildings_059" type="MeshInstance" parent="Buildings"]
-transform = Transform( 4, 0, 0, 0, 10, 0, 0, 0, 4, 32.6359, -0.00229037, 32.3206 )
-mesh = ExtResource( 3 )
-material/0 = null
-material/1 = null
-material/2 = null
-material/3 = null
-material/4 = null
-material/5 = null
+[node name="SmallBuilding82" parent="Buildings" instance=ExtResource( 4 )]
+editor/display_folded = true
+transform = Transform( 1.2, 0, 0, 0, 1.5, 0, 0, 0, 1, 24.9735, -3.84657, -38.3525 )
 
-[node name="modularBuildings_060" type="MeshInstance" parent="Buildings"]
-transform = Transform( 4, 0, 0, 0, 10, 0, 0, 0, 4, 32.6359, -0.00229037, 26.8626 )
-mesh = ExtResource( 3 )
-material/0 = null
-material/1 = null
-material/2 = null
-material/3 = null
-material/4 = null
-material/5 = null
+[node name="Onning" parent="Buildings/SmallBuilding82" instance=ExtResource( 5 )]
+transform = Transform( 1.2, 0, 0, 0, 1, 0, 0, 0, 0.9, 0.416286, 1.47999, 0.155506 )
 
-[node name="modularBuildings_061" type="MeshInstance" parent="Buildings"]
-transform = Transform( 4, 0, 0, 0, 10, 0, 0, 0, 4, 32.6359, -0.00229037, 21.0969 )
-mesh = ExtResource( 3 )
-material/0 = null
-material/1 = null
-material/2 = null
-material/3 = null
-material/4 = null
-material/5 = null
+[node name="SmallBuilding8" parent="Buildings" instance=ExtResource( 4 )]
+transform = Transform( -0.999683, 0, 0.0251623, 0, 1, 0, -0.0251623, 0, -0.999683, 37.2242, -0.355854, 30.7433 )
 
-[node name="modularBuildings_069" type="MeshInstance" parent="Buildings"]
-transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 44.6407, -0.0127664, 37.8223 )
-mesh = ExtResource( 1 )
-material/0 = null
-material/1 = null
-material/2 = null
-material/3 = null
-material/4 = null
+[node name="SmallBuilding47" parent="Buildings" instance=ExtResource( 4 )]
+transform = Transform( -0.999683, 0, 0.0251623, 0, 1, 0, -0.0251623, 0, -0.999683, 58.6108, -0.355854, 30.7433 )
 
-[node name="modularBuildings_097" type="MeshInstance" parent="Buildings"]
-transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 38.6062, -0.0127664, 37.8223 )
-mesh = ExtResource( 1 )
-material/0 = null
-material/1 = null
-material/2 = null
-material/3 = null
-material/4 = null
+[node name="SmallBuilding58" parent="Buildings" instance=ExtResource( 4 )]
+transform = Transform( -0.999683, 0, 0.0251623, 0, 1, 0, -0.0251623, 0, -0.999683, 78.7292, -0.355854, 30.7433 )
 
-[node name="modularBuildings_098" type="MeshInstance" parent="Buildings"]
-transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 34.5222, -0.0127664, 37.8223 )
-mesh = ExtResource( 1 )
-material/0 = null
-material/1 = null
-material/2 = null
-material/3 = null
-material/4 = null
+[node name="SmallBuilding85" parent="Buildings" instance=ExtResource( 4 )]
+transform = Transform( -0.999683, 0, 0.0251623, 0, 1, 0, -0.0251623, 0, -0.999683, 16.7863, -3.90419, 23.1156 )
 
-[node name="modularBuildings_099" type="MeshInstance" parent="Buildings"]
-transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 44.1401, -0.0127664, 41.6079 )
-mesh = ExtResource( 1 )
-material/0 = null
-material/1 = null
-material/2 = null
-material/3 = null
-material/4 = null
+[node name="Skyscraper" parent="Buildings" instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 44.7665, -0.401148, 33.5291 )
 
-[node name="modularBuildings_100" type="MeshInstance" parent="Buildings"]
-transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 38.3658, -0.0127664, 41.6079 )
-mesh = ExtResource( 1 )
-material/0 = null
-material/1 = null
-material/2 = null
-material/3 = null
-material/4 = null
+[node name="Skyscraper24" parent="Buildings" instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 66.1531, -0.401148, 33.5291 )
 
-[node name="modularBuildings_101" type="MeshInstance" parent="Buildings"]
-transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 34.5033, -0.0127664, 41.6079 )
-mesh = ExtResource( 1 )
-material/0 = null
-material/1 = null
-material/2 = null
-material/3 = null
-material/4 = null
+[node name="Skyscraper46" parent="Buildings" instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 86.2715, -0.401148, 33.5291 )
 
-[node name="modularBuildings_102" type="MeshInstance" parent="Buildings"]
-transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 43.5767, -0.0127664, 45.6118 )
-mesh = ExtResource( 1 )
-material/0 = null
-material/1 = null
-material/2 = null
-material/3 = null
-material/4 = null
+[node name="Skyscraper70" parent="Buildings" instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 24.3286, -3.94948, 25.9015 )
 
-[node name="modularBuildings_103" type="MeshInstance" parent="Buildings"]
-transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 38.6116, -0.0127664, 45.6118 )
-mesh = ExtResource( 1 )
-material/0 = null
-material/1 = null
-material/2 = null
-material/3 = null
-material/4 = null
+[node name="Skyscraper2" parent="Buildings" instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1.3, 0, 0, 0, 1, 45.1907, -0.662381, 23.9434 )
 
-[node name="modularBuildings_111" type="MeshInstance" parent="Buildings"]
-transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 21.8954, -0.0127664, 45.4795 )
-mesh = ExtResource( 1 )
-material/0 = null
-material/1 = null
-material/2 = null
-material/3 = null
-material/4 = null
+[node name="Skyscraper32" parent="Buildings" instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1.3, 0, 0, 0, 1, 66.5773, -0.662381, 23.9434 )
 
-[node name="modularBuildings_110" type="MeshInstance" parent="Buildings"]
-transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 25.9791, -0.0127664, 45.4795 )
-mesh = ExtResource( 1 )
-material/0 = null
-material/1 = null
-material/2 = null
-material/3 = null
-material/4 = null
+[node name="Skyscraper44" parent="Buildings" instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1.3, 0, 0, 0, 1, 86.6957, -0.662381, 23.9434 )
 
-[node name="modularBuildings_109" type="MeshInstance" parent="Buildings"]
-transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 25.9791, -0.0127664, 41.3999 )
-mesh = ExtResource( 1 )
-material/0 = null
-material/1 = null
-material/2 = null
-material/3 = null
-material/4 = null
+[node name="Skyscraper68" parent="Buildings" instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1.3, 0, 0, 0, 1, 24.7528, -4.21071, 16.3157 )
 
-[node name="modularBuildings_108" type="MeshInstance" parent="Buildings"]
-transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 25.9791, -0.0127664, 37.4547 )
-mesh = ExtResource( 1 )
-material/0 = null
-material/1 = null
-material/2 = null
-material/3 = null
-material/4 = null
+[node name="Skyscraper11" parent="Buildings" instance=ExtResource( 6 )]
+transform = Transform( -0.999941, 0.00152384, 0.0107803, 0.00115467, 1.3, -0.00162842, -0.0107822, -0.00210061, -0.999941, 37.3474, -0.850397, 25.6224 )
 
-[node name="modularBuildings_107" type="MeshInstance" parent="Buildings"]
-transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 30.1807, -0.0127664, 37.4547 )
-mesh = ExtResource( 1 )
-material/0 = null
-material/1 = null
-material/2 = null
-material/3 = null
-material/4 = null
+[node name="Skyscraper27" parent="Buildings" instance=ExtResource( 6 )]
+transform = Transform( -0.999941, 0.00152384, 0.0107803, 0.00115467, 1.3, -0.00162842, -0.0107822, -0.00210061, -0.999941, 58.7339, -0.850397, 25.6224 )
 
-[node name="modularBuildings_106" type="MeshInstance" parent="Buildings"]
-transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 30.1807, -0.0127664, 41.5176 )
-mesh = ExtResource( 1 )
-material/0 = null
-material/1 = null
-material/2 = null
-material/3 = null
-material/4 = null
+[node name="Skyscraper47" parent="Buildings" instance=ExtResource( 6 )]
+transform = Transform( -0.999941, 0.00152384, 0.0107803, 0.00115467, 1.3, -0.00162842, -0.0107822, -0.00210061, -0.999941, 78.8524, -0.850397, 25.6224 )
 
-[node name="modularBuildings_105" type="MeshInstance" parent="Buildings"]
-transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 30.1807, -0.0127664, 45.6118 )
-mesh = ExtResource( 1 )
-material/0 = null
-material/1 = null
-material/2 = null
-material/3 = null
-material/4 = null
+[node name="Skyscraper71" parent="Buildings" instance=ExtResource( 6 )]
+transform = Transform( -0.999941, 0.00152384, 0.0107803, 0.00115467, 1.3, -0.00162842, -0.0107822, -0.00210061, -0.999941, 16.9095, -4.39873, 17.9947 )
 
-[node name="modularBuildings_104" type="MeshInstance" parent="Buildings"]
-transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 34.66, -0.0127664, 45.6118 )
-mesh = ExtResource( 1 )
-material/0 = null
-material/1 = null
-material/2 = null
-material/3 = null
-material/4 = null
+[node name="Skyscraper12" parent="Buildings" instance=ExtResource( 6 )]
+transform = Transform( 0.999725, -0.0015503, -0.0234319, 0.00115467, 1.3, -0.00162842, 0.0234338, 0.00208116, 0.999724, 45.5143, -0.933879, 0.275019 )
+
+[node name="Skyscraper33" parent="Buildings" instance=ExtResource( 6 )]
+transform = Transform( 0.999725, -0.0015503, -0.0234319, 0.00115467, 1.3, -0.00162842, 0.0234338, 0.00208116, 0.999724, 66.9008, -0.933879, 0.275019 )
+
+[node name="Skyscraper50" parent="Buildings" instance=ExtResource( 6 )]
+transform = Transform( 0.999725, -0.0015503, -0.0234319, 0.00115467, 1.3, -0.00162842, 0.0234338, 0.00208116, 0.999724, 87.0192, -0.933879, 0.275019 )
+
+[node name="Skyscraper59" parent="Buildings" instance=ExtResource( 6 )]
+transform = Transform( 0.999725, -0.0015503, -0.0234319, 0.00115467, 1.3, -0.00162842, 0.0234338, 0.00208116, 0.999724, 25.0763, -4.48221, -7.35265 )
+
+[node name="Skyscraper13" parent="Buildings" instance=ExtResource( 6 )]
+transform = Transform( 1.29964, -0.00238503, -0.0351478, 0.00150107, 2, -0.0024426, 0.0304639, 0.00320179, 1.49959, 45.5143, -0.933879, -2.46914 )
+
+[node name="Skyscraper37" parent="Buildings" instance=ExtResource( 6 )]
+transform = Transform( 1.29964, -0.00238503, -0.0351478, 0.00150107, 2, -0.0024426, 0.0304639, 0.00320179, 1.49959, 66.9008, -0.933879, -2.46914 )
+
+[node name="Skyscraper54" parent="Buildings" instance=ExtResource( 6 )]
+transform = Transform( 1.29964, -0.00238503, -0.0351478, 0.00150107, 2, -0.0024426, 0.0304639, 0.00320179, 1.49959, 87.0192, -0.933879, -2.46914 )
+
+[node name="Skyscraper73" parent="Buildings" instance=ExtResource( 6 )]
+transform = Transform( 1.29964, -0.00238503, -0.0351478, 0.00150107, 2, -0.0024426, 0.0304639, 0.00320179, 1.49959, 25.0763, -4.48221, -10.0968 )
+
+[node name="Skyscraper14" parent="Buildings" instance=ExtResource( 6 )]
+transform = Transform( 1.29964, -0.00369679, -0.0351478, 0.00150107, 3.09999, -0.0024426, 0.0304639, 0.00496278, 1.49959, 45.5143, -1.73587, -17.049 )
+
+[node name="Skyscraper38" parent="Buildings" instance=ExtResource( 6 )]
+transform = Transform( 1.29964, -0.00369679, -0.0351478, 0.00150107, 3.09999, -0.0024426, 0.0304639, 0.00496278, 1.49959, 66.9008, -1.73587, -17.049 )
+
+[node name="Skyscraper55" parent="Buildings" instance=ExtResource( 6 )]
+transform = Transform( 1.29964, -0.00369679, -0.0351478, 0.00150107, 3.09999, -0.0024426, 0.0304639, 0.00496278, 1.49959, 87.0192, -1.73587, -17.049 )
+
+[node name="Skyscraper74" parent="Buildings" instance=ExtResource( 6 )]
+transform = Transform( 1.29964, -0.00369679, -0.0351478, 0.00150107, 3.09999, -0.0024426, 0.0304639, 0.00496278, 1.49959, 25.0763, -5.2842, -24.6767 )
+
+[node name="Skyscraper16" parent="Buildings" instance=ExtResource( 6 )]
+transform = Transform( 1.29964, -0.00369679, -0.0351478, 0.00150107, 3.09999, -0.0024426, 0.0304639, 0.00496278, 1.49959, 27.9269, -1.73587, -17.049 )
+
+[node name="Skyscraper29" parent="Buildings" instance=ExtResource( 6 )]
+transform = Transform( 1.29964, -0.00369679, -0.0351478, 0.00150107, 3.09999, -0.0024426, 0.0304639, 0.00496278, 1.49959, 49.3135, -1.73587, -17.049 )
+
+[node name="Skyscraper48" parent="Buildings" instance=ExtResource( 6 )]
+transform = Transform( 1.29964, -0.00369679, -0.0351478, 0.00150107, 3.09999, -0.0024426, 0.0304639, 0.00496278, 1.49959, 69.4319, -1.73587, -17.049 )
+
+[node name="Skyscraper72" parent="Buildings" instance=ExtResource( 6 )]
+transform = Transform( 1.29964, -0.00369679, -0.0351478, 0.00150107, 3.09999, -0.0024426, 0.0304639, 0.00496278, 1.49959, 7.48901, -5.2842, -24.6767 )
+
+[node name="Skyscraper17" parent="Buildings" instance=ExtResource( 6 )]
+transform = Transform( 1.29964, -0.00369679, -0.0351478, 0.00150107, 3.09999, -0.0024426, 0.0304639, 0.00496278, 1.49959, 27.9269, -1.73587, -17.049 )
+
+[node name="Skyscraper21" parent="Buildings" instance=ExtResource( 6 )]
+transform = Transform( 1.29964, -0.00369679, -0.0351478, 0.00150107, 3.09999, -0.0024426, 0.0304639, 0.00496278, 1.49959, 49.3135, -1.73587, -17.049 )
+
+[node name="Skyscraper52" parent="Buildings" instance=ExtResource( 6 )]
+transform = Transform( 1.29964, -0.00369679, -0.0351478, 0.00150107, 3.09999, -0.0024426, 0.0304639, 0.00496278, 1.49959, 69.4319, -1.73587, -17.049 )
+
+[node name="Skyscraper61" parent="Buildings" instance=ExtResource( 6 )]
+transform = Transform( 1.29964, -0.00369679, -0.0351478, 0.00150107, 3.09999, -0.0024426, 0.0304639, 0.00496278, 1.49959, 7.48901, -5.2842, -24.6767 )
+
+[node name="Skyscraper18" parent="Buildings" instance=ExtResource( 6 )]
+transform = Transform( -1.29993, 0.00363291, 0.0159348, 0.00150107, 3.09999, -0.0024426, -0.0138127, -0.00500973, -1.49991, 36.456, -1.73587, -24.9768 )
+
+[node name="Skyscraper31" parent="Buildings" instance=ExtResource( 6 )]
+transform = Transform( -1.29993, 0.00363291, 0.0159348, 0.00150107, 3.09999, -0.0024426, -0.0138127, -0.00500973, -1.49991, 57.8425, -1.73587, -24.9768 )
+
+[node name="Skyscraper41" parent="Buildings" instance=ExtResource( 6 )]
+transform = Transform( -1.29993, 0.00363291, 0.0159348, 0.00150107, 3.09999, -0.0024426, -0.0138127, -0.00500973, -1.49991, 77.9609, -1.73587, -24.9768 )
+
+[node name="Skyscraper65" parent="Buildings" instance=ExtResource( 6 )]
+transform = Transform( -1.29993, 0.00363291, 0.0159348, 0.00150107, 3.09999, -0.0024426, -0.0138127, -0.00500973, -1.49991, 16.018, -5.2842, -32.6045 )
+
+[node name="Skyscraper19" parent="Buildings" instance=ExtResource( 6 )]
+transform = Transform( 1.29905, -0.00340517, -0.0573905, 0.00150107, 2.79999, -0.0024426, 0.0497409, 0.00443248, 1.4989, 45.8881, -1.73587, -37.5548 )
+
+[node name="Skyscraper26" parent="Buildings" instance=ExtResource( 6 )]
+transform = Transform( 1.29905, -0.00340517, -0.0573905, 0.00150107, 2.79999, -0.0024426, 0.0497409, 0.00443248, 1.4989, 67.2746, -1.73587, -37.5548 )
+
+[node name="Skyscraper51" parent="Buildings" instance=ExtResource( 6 )]
+transform = Transform( 1.29905, -0.00340517, -0.0573905, 0.00150107, 2.79999, -0.0024426, 0.0497409, 0.00443248, 1.4989, 87.393, -1.73587, -37.5548 )
+
+[node name="Skyscraper60" parent="Buildings" instance=ExtResource( 6 )]
+transform = Transform( 1.29905, -0.00340517, -0.0573905, 0.00150107, 2.79999, -0.0024426, 0.0497409, 0.00443248, 1.4989, 25.4501, -5.2842, -45.1825 )
+
+[node name="Skyscraper15" parent="Buildings" instance=ExtResource( 6 )]
+transform = Transform( 1.29964, -0.00238503, -0.0351478, 0.00150107, 2, -0.0024426, 0.0304639, 0.00320179, 1.49959, 45.6154, -0.858871, -20.0802 )
+
+[node name="Skyscraper28" parent="Buildings" instance=ExtResource( 6 )]
+transform = Transform( 1.29964, -0.00238503, -0.0351478, 0.00150107, 2, -0.0024426, 0.0304639, 0.00320179, 1.49959, 67.002, -0.858871, -20.0802 )
+
+[node name="Skyscraper43" parent="Buildings" instance=ExtResource( 6 )]
+transform = Transform( 1.29964, -0.00238503, -0.0351478, 0.00150107, 2, -0.0024426, 0.0304639, 0.00320179, 1.49959, 87.1204, -0.858871, -20.0802 )
+
+[node name="Skyscraper67" parent="Buildings" instance=ExtResource( 6 )]
+transform = Transform( 1.29964, -0.00238503, -0.0351478, 0.00150107, 2, -0.0024426, 0.0304639, 0.00320179, 1.49959, 25.1775, -4.4072, -27.7079 )
+
+[node name="SmallBuilding2" parent="Buildings" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 44.9456, 0, 22.0115 )
+
+[node name="SmallBuilding36" parent="Buildings" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 66.3322, 0, 22.0115 )
+
+[node name="SmallBuilding70" parent="Buildings" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 86.4506, 0, 22.0115 )
+
+[node name="SmallBuilding80" parent="Buildings" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 24.5077, -3.54833, 14.3838 )
+
+[node name="SmallBuilding17" parent="Buildings" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 2, 0, 0, 0, 1, 45.344, -0.649085, -12.7771 )
+
+[node name="SmallBuilding51" parent="Buildings" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 2, 0, 0, 0, 1, 66.7306, -0.649085, -12.7771 )
+
+[node name="SmallBuilding74" parent="Buildings" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 2, 0, 0, 0, 1, 86.849, -0.649085, -12.7771 )
+
+[node name="SmallBuilding95" parent="Buildings" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 2, 0, 0, 0, 1, 24.9061, -4.19742, -20.4048 )
+
+[node name="SmallBuilding18" parent="Buildings" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 21.5954, 0, 22.0115 )
+
+[node name="SmallBuilding41" parent="Buildings" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 42.9819, 0, 22.0115 )
+
+[node name="SmallBuilding64" parent="Buildings" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 63.1003, 0, 22.0115 )
+
+[node name="SmallBuilding91" parent="Buildings" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.15744, -3.54833, 14.3838 )
+
+[node name="SmallBuilding19" parent="Buildings" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 18.0192, 0, 22.0115 )
+
+[node name="SmallBuilding33" parent="Buildings" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 39.4058, 0, 22.0115 )
+
+[node name="SmallBuilding67" parent="Buildings" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 59.5242, 0, 22.0115 )
+
+[node name="SmallBuilding77" parent="Buildings" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.41869, -3.54833, 14.3838 )
+
+[node name="SmallBuilding10" parent="Buildings" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 30.5586, -0.296277, 15.6693 )
+
+[node name="SmallBuilding35" parent="Buildings" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 51.9451, -0.296277, 15.6693 )
+
+[node name="SmallBuilding71" parent="Buildings" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 72.0636, -0.296277, 15.6693 )
+
+[node name="SmallBuilding92" parent="Buildings" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10.1207, -3.84461, 8.04163 )
+
+[node name="SmallBuilding11" parent="Buildings" instance=ExtResource( 7 )]
+transform = Transform( -1, 0, -0.000760686, 0, 1, 0, 0.000760686, 0, -1, 36.672, -0.283939, 10.6248 )
+
+[node name="SmallBuilding42" parent="Buildings" instance=ExtResource( 7 )]
+transform = Transform( -1, 0, -0.000760686, 0, 1, 0, 0.000760686, 0, -1, 58.0585, -0.283939, 10.6248 )
+
+[node name="SmallBuilding54" parent="Buildings" instance=ExtResource( 7 )]
+transform = Transform( -1, 0, -0.000760686, 0, 1, 0, 0.000760686, 0, -1, 78.1769, -0.283939, 10.6248 )
+
+[node name="SmallBuilding81" parent="Buildings" instance=ExtResource( 7 )]
+transform = Transform( -1, 0, -0.000760686, 0, 1, 0, 0.000760686, 0, -1, 16.234, -3.83227, 2.99714 )
+
+[node name="SmallBuilding12" parent="Buildings" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 45.4222, -0.308769, 8.41701 )
+
+[node name="SmallBuilding48" parent="Buildings" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 66.8088, -0.308769, 8.41701 )
+
+[node name="SmallBuilding60" parent="Buildings" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 86.9272, -0.308769, 8.41701 )
+
+[node name="SmallBuilding87" parent="Buildings" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 24.9843, -3.8571, 0.789335 )
+
+[node name="SmallBuilding13" parent="Buildings" instance=ExtResource( 7 )]
+transform = Transform( -0.999965, 0, 0.008421, 0, 1, 0, -0.008421, 0, -0.999965, 36.915, -7.62939e-06, 17.321 )
+
+[node name="SmallBuilding46" parent="Buildings" instance=ExtResource( 7 )]
+transform = Transform( -0.999965, 0, 0.008421, 0, 1, 0, -0.008421, 0, -0.999965, 58.3015, -7.62939e-06, 17.321 )
+
+[node name="SmallBuilding61" parent="Buildings" instance=ExtResource( 7 )]
+transform = Transform( -0.999965, 0, 0.008421, 0, 1, 0, -0.008421, 0, -0.999965, 78.4199, -7.62939e-06, 17.321 )
+
+[node name="SmallBuilding88" parent="Buildings" instance=ExtResource( 7 )]
+transform = Transform( -0.999965, 0, 0.008421, 0, 1, 0, -0.008421, 0, -0.999965, 16.477, -3.54834, 9.69337 )
+
+[node name="SmallBuilding7" parent="Buildings" instance=ExtResource( 7 )]
+transform = Transform( -0.999883, 0, 0.0153297, 0, 1, 0, -0.0153297, 0, -0.999883, 36.8982, -0.378778, 33.2586 )
+
+[node name="SmallBuilding44" parent="Buildings" instance=ExtResource( 7 )]
+transform = Transform( -0.999883, 0, 0.0153297, 0, 1, 0, -0.0153297, 0, -0.999883, 58.2848, -0.378778, 33.2586 )
+
+[node name="SmallBuilding59" parent="Buildings" instance=ExtResource( 7 )]
+transform = Transform( -0.999883, 0, 0.0153297, 0, 1, 0, -0.0153297, 0, -0.999883, 78.4032, -0.378778, 33.2586 )
+
+[node name="SmallBuilding86" parent="Buildings" instance=ExtResource( 7 )]
+transform = Transform( -0.999883, 0, 0.0153297, 0, 1, 0, -0.0153297, 0, -0.999883, 16.4603, -3.92711, 25.6309 )
+
+[node name="SmallBuilding1" parent="Buildings" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 45.362, -0.870135, 15.5659 )
+
+[node name="SmallBuilding37" parent="Buildings" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 66.7486, -0.870135, 15.5659 )
+
+[node name="SmallBuilding68" parent="Buildings" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 86.867, -0.870135, 15.5659 )
+
+[node name="SmallBuilding78" parent="Buildings" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 24.9241, -4.41847, 7.9382 )
+
+[node name="SmallBuilding16" parent="Buildings" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 45.5955, -0.898041, -11.259 )
+
+[node name="SmallBuilding53" parent="Buildings" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 66.9821, -0.898041, -11.259 )
+
+[node name="SmallBuilding73" parent="Buildings" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 87.1005, -0.898041, -11.259 )
+
+[node name="SmallBuilding94" parent="Buildings" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 25.1576, -4.44637, -18.8867 )
+
+[node name="SmallBuilding24" parent="Buildings" instance=ExtResource( 1 )]
+transform = Transform( -0.0405134, 0, -0.999179, 0, 1, 0, 0.999179, 0, -0.0405134, 33.2097, -0.832512, 1.43219 )
+
+[node name="SmallBuilding38" parent="Buildings" instance=ExtResource( 1 )]
+transform = Transform( -0.0405134, 0, -0.999179, 0, 1, 0, 0.999179, 0, -0.0405134, 54.5963, -0.832512, 1.43219 )
+
+[node name="SmallBuilding66" parent="Buildings" instance=ExtResource( 1 )]
+transform = Transform( -0.0405134, 0, -0.999179, 0, 1, 0, 0.999179, 0, -0.0405134, 74.7147, -0.832512, 1.43219 )
+
+[node name="SmallBuilding76" parent="Buildings" instance=ExtResource( 1 )]
+transform = Transform( -0.0405134, 0, -0.999179, 0, 1, 0, 0.999179, 0, -0.0405134, 12.7718, -4.38084, -6.19549 )
+
+[node name="SmallBuilding25" parent="Buildings" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 31.8251, -0.898041, -11.259 )
+
+[node name="SmallBuilding50" parent="Buildings" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 53.2116, -0.898041, -11.259 )
+
+[node name="SmallBuilding62" parent="Buildings" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 73.3301, -0.898041, -11.259 )
+
+[node name="SmallBuilding89" parent="Buildings" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 11.3872, -4.44637, -18.8867 )
+
+[node name="SmallBuilding26" parent="Buildings" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 31.8251, -0.898041, -11.259 )
+
+[node name="SmallBuilding40" parent="Buildings" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 53.2116, -0.898041, -11.259 )
+
+[node name="SmallBuilding63" parent="Buildings" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 73.3301, -0.898041, -11.259 )
+
+[node name="SmallBuilding90" parent="Buildings" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 11.3872, -4.44637, -18.8867 )
+
+[node name="SmallBuilding27" parent="Buildings" instance=ExtResource( 1 )]
+transform = Transform( 1.3, 0, 0, 0, 1.6, 0, 0, 0, 1.3, 45.6599, -1.18011, -28.0628 )
+
+[node name="SmallBuilding45" parent="Buildings" instance=ExtResource( 1 )]
+transform = Transform( 1.3, 0, 0, 0, 1.6, 0, 0, 0, 1.3, 67.0464, -1.18011, -28.0628 )
+
+[node name="SmallBuilding57" parent="Buildings" instance=ExtResource( 1 )]
+transform = Transform( 1.3, 0, 0, 0, 1.6, 0, 0, 0, 1.3, 87.1648, -1.18011, -28.0628 )
+
+[node name="SmallBuilding84" parent="Buildings" instance=ExtResource( 1 )]
+transform = Transform( 1.3, 0, 0, 0, 1.6, 0, 0, 0, 1.3, 25.2219, -4.72844, -35.6905 )
+
+[node name="Skyscraper3" parent="Buildings" instance=ExtResource( 6 )]
+transform = Transform( 1.7, 0, 0, 0, 1.7, 0, 0, 0, 1.3, 45.3323, -0.750652, 13.2486 )
+
+[node name="Skyscraper30" parent="Buildings" instance=ExtResource( 6 )]
+transform = Transform( 1.7, 0, 0, 0, 1.7, 0, 0, 0, 1.3, 66.7188, -0.750652, 13.2486 )
+
+[node name="Skyscraper39" parent="Buildings" instance=ExtResource( 6 )]
+transform = Transform( 1.7, 0, 0, 0, 1.7, 0, 0, 0, 1.3, 86.8372, -0.750652, 13.2486 )
+
+[node name="Skyscraper63" parent="Buildings" instance=ExtResource( 6 )]
+transform = Transform( 1.7, 0, 0, 0, 1.7, 0, 0, 0, 1.3, 24.8943, -4.29898, 5.6209 )
+
+[node name="Skyscraper5" parent="Buildings" instance=ExtResource( 6 )]
+transform = Transform( 1.7, 0, 0, 0, 1.7, 0, 0, 0, 1.3, 30.564, -0.750652, 11.7294 )
+
+[node name="Skyscraper23" parent="Buildings" instance=ExtResource( 6 )]
+transform = Transform( 1.7, 0, 0, 0, 1.7, 0, 0, 0, 1.3, 51.9505, -0.750652, 11.7294 )
+
+[node name="Skyscraper56" parent="Buildings" instance=ExtResource( 6 )]
+transform = Transform( 1.7, 0, 0, 0, 1.7, 0, 0, 0, 1.3, 72.069, -0.750652, 11.7294 )
+
+[node name="Skyscraper75" parent="Buildings" instance=ExtResource( 6 )]
+transform = Transform( 1.7, 0, 0, 0, 1.7, 0, 0, 0, 1.3, 10.126, -4.29898, 4.10172 )
+
+[node name="Skyscraper6" parent="Buildings" instance=ExtResource( 6 )]
+transform = Transform( -1.69972, 0, 0.0234222, 0, 1.7, 0, -0.0306291, 0, -1.29979, 37.0101, -0.750652, 28.211 )
+
+[node name="Skyscraper34" parent="Buildings" instance=ExtResource( 6 )]
+transform = Transform( -1.69972, 0, 0.0234222, 0, 1.7, 0, -0.0306291, 0, -1.29979, 58.3967, -0.750652, 28.211 )
+
+[node name="Skyscraper42" parent="Buildings" instance=ExtResource( 6 )]
+transform = Transform( -1.69972, 0, 0.0234222, 0, 1.7, 0, -0.0306291, 0, -1.29979, 78.5151, -0.750652, 28.211 )
+
+[node name="Skyscraper66" parent="Buildings" instance=ExtResource( 6 )]
+transform = Transform( -1.69972, 0, 0.0234222, 0, 1.7, 0, -0.0306291, 0, -1.29979, 16.5722, -4.29898, 20.5833 )
+
+[node name="Skyscraper7" parent="Buildings" instance=ExtResource( 6 )]
+transform = Transform( -1.9, 0, 0.000552404, 0, 2, 0, -0.000699712, 0, -1.5, 36.6919, -0.750652, 15.0708 )
+
+[node name="Skyscraper22" parent="Buildings" instance=ExtResource( 6 )]
+transform = Transform( -1.9, 0, 0.000552404, 0, 2, 0, -0.000699712, 0, -1.5, 58.0785, -0.750652, 15.0708 )
+
+[node name="Skyscraper57" parent="Buildings" instance=ExtResource( 6 )]
+transform = Transform( -1.9, 0, 0.000552404, 0, 2, 0, -0.000699712, 0, -1.5, 78.1969, -0.750652, 15.0708 )
+
+[node name="Skyscraper76" parent="Buildings" instance=ExtResource( 6 )]
+transform = Transform( -1.9, 0, 0.000552404, 0, 2, 0, -0.000699712, 0, -1.5, 16.254, -4.29898, 7.44312 )
+
+[node name="Skyscraper8" parent="Buildings" instance=ExtResource( 6 )]
+transform = Transform( -1.7, 0, -0.000848347, 0, 1.7, 0, 0.00110938, 0, -1.3, 37.0333, -0.633872, 8.1404 )
+
+[node name="Skyscraper35" parent="Buildings" instance=ExtResource( 6 )]
+transform = Transform( -1.7, 0, -0.000848347, 0, 1.7, 0, 0.00110938, 0, -1.3, 58.4198, -0.633872, 8.1404 )
+
+[node name="Skyscraper49" parent="Buildings" instance=ExtResource( 6 )]
+transform = Transform( -1.7, 0, -0.000848347, 0, 1.7, 0, 0.00110938, 0, -1.3, 78.5383, -0.633872, 8.1404 )
+
+[node name="Skyscraper58" parent="Buildings" instance=ExtResource( 6 )]
+transform = Transform( -1.7, 0, -0.000848347, 0, 1.7, 0, 0.00110938, 0, -1.3, 16.5953, -4.1822, 0.512732 )
+
+[node name="Skyscraper9" parent="Buildings" instance=ExtResource( 6 )]
+transform = Transform( -1.89988, 0, -0.0169241, 0, 2.6, 0, 0.0214372, 0, -1.4999, 37.1532, -0.750652, 5.28806 )
+
+[node name="Skyscraper25" parent="Buildings" instance=ExtResource( 6 )]
+transform = Transform( -1.89988, 0, -0.0169241, 0, 2.6, 0, 0.0214372, 0, -1.4999, 58.5397, -0.750652, 5.28806 )
+
+[node name="Skyscraper53" parent="Buildings" instance=ExtResource( 6 )]
+transform = Transform( -1.89988, 0, -0.0169241, 0, 2.6, 0, 0.0214372, 0, -1.4999, 78.6582, -0.750652, 5.28806 )
+
+[node name="Skyscraper62" parent="Buildings" instance=ExtResource( 6 )]
+transform = Transform( -1.89988, 0, -0.0169241, 0, 2.6, 0, 0.0214372, 0, -1.4999, 16.7153, -4.29898, -2.33961 )
+
+[node name="Skyscraper10" parent="Buildings" instance=ExtResource( 6 )]
+transform = Transform( -1.69934, 0, 0.036193, 0, 1.7, 0, -0.0473293, 0, -1.2995, 37.1016, -1.03792, 42.3808 )
+
+[node name="Skyscraper36" parent="Buildings" instance=ExtResource( 6 )]
+transform = Transform( -1.69934, 0, 0.036193, 0, 1.7, 0, -0.0473293, 0, -1.2995, 58.4881, -1.03792, 42.3808 )
+
+[node name="Skyscraper40" parent="Buildings" instance=ExtResource( 6 )]
+transform = Transform( -1.69934, 0, 0.036193, 0, 1.7, 0, -0.0473293, 0, -1.2995, 78.6065, -1.03792, 42.3808 )
+
+[node name="Skyscraper64" parent="Buildings" instance=ExtResource( 6 )]
+transform = Transform( -1.69934, 0, 0.036193, 0, 1.7, 0, -0.0473293, 0, -1.2995, 16.6636, -4.58625, 34.7531 )
+
+[node name="Skyscraper4" parent="Buildings" instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 45.0109, -0.401389, 10.4001 )
+
+[node name="Skyscraper20" parent="Buildings" instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 66.3974, -0.401389, 10.4001 )
+
+[node name="Skyscraper45" parent="Buildings" instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 86.5159, -0.401389, 10.4001 )
+
+[node name="Skyscraper69" parent="Buildings" instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 24.573, -3.94972, 2.77247 )
+
+[node name="Onning2" parent="Buildings" instance=ExtResource( 5 )]
+transform = Transform( -1.29959, 0.000925444, 0.0214232, 0.00112461, 0.999997, -0.00204484, -0.0327676, -0.00238313, -0.849728, 36.9594, 1.19554, 30.6767 )
+
+[node name="Onning4" parent="Buildings" instance=ExtResource( 5 )]
+transform = Transform( -1.29959, 0.000925444, 0.0214232, 0.00112461, 0.999997, -0.00204484, -0.0327676, -0.00238313, -0.849728, 58.346, 1.19554, 30.6767 )
+
+[node name="Onning7" parent="Buildings" instance=ExtResource( 5 )]
+transform = Transform( -1.29959, 0.000925444, 0.0214232, 0.00112461, 0.999997, -0.00204484, -0.0327676, -0.00238313, -0.849728, 78.4644, 1.19554, 30.6767 )
+
+[node name="Onning8" parent="Buildings" instance=ExtResource( 5 )]
+transform = Transform( -1.29959, 0.000925444, 0.0214232, 0.00112461, 0.999997, -0.00204484, -0.0327676, -0.00238313, -0.849728, 16.5215, -2.35279, 23.0491 )
+
+[node name="Onning3" parent="Buildings" instance=ExtResource( 5 )]
+transform = Transform( 1.5, 0, 0, 0, 1, 0, 0, 0, 1, 45.6213, 1.57824, 7.61488 )
+
+[node name="Onning5" parent="Buildings" instance=ExtResource( 5 )]
+transform = Transform( 1.5, 0, 0, 0, 1, 0, 0, 0, 1, 67.0078, 1.57824, 7.61488 )
+
+[node name="Onning6" parent="Buildings" instance=ExtResource( 5 )]
+transform = Transform( 1.5, 0, 0, 0, 1, 0, 0, 0, 1, 87.1262, 1.57824, 7.61488 )
+
+[node name="Onning9" parent="Buildings" instance=ExtResource( 5 )]
+transform = Transform( 1.5, 0, 0, 0, 1, 0, 0, 0, 1, 25.1833, -1.9701, -0.0127907 )
+
+[node name="Spatial" parent="Buildings" instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -38.7926, 0, -23.1137 )
+
+[node name="Spatial4" parent="Buildings" instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -17.4061, 0, -23.1137 )
+
+[node name="Spatial5" parent="Buildings" instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.71236, 0, -23.1137 )
+
+[node name="Spatial8" parent="Buildings" instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -59.2305, -3.54833, -30.7414 )
+
+[node name="Spatial2" parent="Buildings" instance=ExtResource( 8 )]
+transform = Transform( -0.999843, 0, -0.0177182, 0, 1, 0, 0.0177182, 0, -0.999843, -44.8284, 0.433455, 13.7617 )
+
+[node name="Spatial3" parent="Buildings" instance=ExtResource( 8 )]
+transform = Transform( -0.999843, 0, -0.0177182, 0, 1, 0, 0.0177182, 0, -0.999843, -23.4419, 0.433455, 13.7617 )
+
+[node name="Spatial9" parent="Buildings" instance=ExtResource( 8 )]
+transform = Transform( -0.0191379, 0, 0.999817, 0, 1, 0, -0.999817, 0, -0.0191379, 12.1628, 0.433455, 18.8495 )
+
+[node name="Spatial6" parent="Buildings" instance=ExtResource( 8 )]
+transform = Transform( -0.999843, 0, -0.0177182, 0, 1, 0, 0.0177182, 0, -0.999843, -3.32344, 0.433455, 13.7617 )
+
+[node name="Spatial10" parent="Buildings" instance=ExtResource( 8 )]
+transform = Transform( -0.0191379, 0, 0.999817, 0, 1, 0, -0.999817, 0, -0.0191379, 12.1913, 0.433455, 38.9679 )
+
+[node name="Spatial7" parent="Buildings" instance=ExtResource( 8 )]
+transform = Transform( -0.999843, 0, -0.0177182, 0, 1, 0, 0.0177182, 0, -0.999843, -65.2663, -3.11488, 6.13402 )
