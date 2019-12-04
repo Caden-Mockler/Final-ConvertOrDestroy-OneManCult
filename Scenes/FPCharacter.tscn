@@ -13,19 +13,18 @@ extents = Vector3( 0.4, 0.1, 0.4 )
 [node name="Spatial" type="Spatial"]
 
 [node name="FP Character" type="KinematicBody" parent="."]
-editor/display_folded = true
 script = ExtResource( 1 )
 
 [node name="Body" type="CollisionShape" parent="FP Character"]
-transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0.916528, 0 )
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 1.07241, 0 )
 shape = SubResource( 1 )
 
 [node name="Feet" type="CollisionShape" parent="FP Character"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.231293, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.269387, 0 )
 shape = SubResource( 2 )
 
 [node name="Pivot" type="Spatial" parent="FP Character"]
-editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.215453, 0 )
 
 [node name="Camera" type="Camera" parent="FP Character/Pivot"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4804, 0 )

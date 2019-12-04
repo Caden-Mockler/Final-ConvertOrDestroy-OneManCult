@@ -14,9 +14,9 @@ func get_input():
 		input_dir += -camera.global_transform.basis.z
 	if Input.is_action_pressed("move_back"):
 		input_dir += camera.global_transform.basis.z
-	if Input.is_action_just_pressed("move_left"):
+	if Input.is_action_pressed("move_left"):
 		input_dir += -camera.global_transform.basis.x
-	if Input.is_action_just_pressed("move_right"):
+	if Input.is_action_pressed("move_right"):
 		input_dir += camera.global_transform.basis.x
 	input_dir = input_dir.normalized()
 	return input_dir
