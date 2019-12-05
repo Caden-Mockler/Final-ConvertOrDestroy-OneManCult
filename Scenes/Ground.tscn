@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Assets/85621051-bloody-brick-wall-background-for-spooky-content-halloween-and-more-.jpg" type="Texture" id=1]
 [ext_resource path="res://Scenes/SmallBuilding1.tscn" type="PackedScene" id=2]
@@ -11,8 +11,6 @@
 [ext_resource path="res://Scenes/PrePlacedBuildings.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Scenes/Hospital.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Assets/starbackground.jpeg" type="Texture" id=11]
-[ext_resource path="res://Assets/BackgroundMusic.ogg" type="AudioStream" id=12]
-[ext_resource path="res://Assets/BackgroundScreams.ogg" type="AudioStream" id=13]
 
 [sub_resource type="BoxShape" id=1]
 extents = Vector3( 50, 0, 50 )
@@ -354,7 +352,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 24.3286, -3.94948, 25.9015 )
 transform = Transform( 1, 0, 0, 0, 1.3, 0, 0, 0, 1, 45.1907, -0.662381, 23.9434 )
 
 [node name="Skyscraper44" parent="Buildings" instance=ExtResource( 7 )]
-transform = Transform( 0.02088, 3.6158e-08, -0.999782, -5.80752e-10, 1.3, 2.78078e-08, 0.999782, 0, 0.02088, 5.3721, -0.618221, -12.4069 )
+transform = Transform( 0.02088, 3.6158e-008, -0.999782, -5.80752e-010, 1.3, 2.78078e-008, 0.999782, 0, 0.02088, 5.3721, -0.618221, -12.4069 )
 
 [node name="Skyscraper68" parent="Buildings" instance=ExtResource( 7 )]
 transform = Transform( 1, 0, 0, 0, 1.3, 0, 0, 0, 1, 24.7528, -4.21071, 16.3157 )
@@ -453,7 +451,7 @@ transform = Transform( 1, 0, 0, 0, 2, 0, 0, 0, 1, 45.344, -0.649085, -12.7771 )
 transform = Transform( 1, 0, 0, 0, 2, 0, 0, 0, 1.7, 13.6156, -0.72179, -38.9385 )
 
 [node name="SmallBuilding95" parent="Buildings" instance=ExtResource( 8 )]
-transform = Transform( -0.00778111, 0.000623625, -2.09994, 9.02691e-06, 2.4, 0.00054554, 0.99997, -1.68126e-05, -0.0163403, 28.3683, -1.0984, 47.0949 )
+transform = Transform( -0.00778111, 0.000623625, -2.09994, 9.02691e-006, 2.4, 0.00054554, 0.99997, -1.68126e-005, -0.0163403, 28.3683, -1.0984, 47.0949 )
 
 [node name="SmallBuilding18" parent="Buildings" instance=ExtResource( 8 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 21.5954, 0, 22.0115 )
@@ -522,7 +520,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 45.5955, -0.898041, -11.259 )
 transform = Transform( 0.7, 0, 0, 0, 1, 0, 0, 0, 1.5, 14.4899, -0.923971, -8.45798 )
 
 [node name="SmallBuilding94" parent="Buildings" instance=ExtResource( 2 )]
-transform = Transform( 0.154536, 0.00113202, 1.28438, -0.000178894, 1.4, -0.00102757, -0.987987, -7.64216e-05, 0.200897, 26.0817, -1.18167, -45.9909 )
+transform = Transform( 0.154536, 0.00113202, 1.28438, -0.000178894, 1.4, -0.00102757, -0.987987, -7.64216e-005, 0.200897, 26.0817, -1.18167, -45.9909 )
 
 [node name="SmallBuilding24" parent="Buildings" instance=ExtResource( 2 )]
 transform = Transform( -0.0405134, 0, -0.999179, 0, 1, 0, 0.999179, 0, -0.0405134, 33.2097, -0.832512, 1.43219 )
@@ -667,16 +665,3 @@ transform = Transform( -0.998795, 0, -0.0490714, 0, 1, 0, 0.0490714, 0, -0.99879
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource( 5 )
-
-[node name="Camera" type="Camera" parent="WorldEnvironment"]
-transform = Transform( 0.0956661, 0.513409, 0.852795, -0.0572349, 0.858144, -0.510208, -0.993767, 0, 0.11148, 0, 3.62065, 0 )
-
-[node name="BackgroundMusic" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 12 )
-volume_db = 10.602
-autoplay = true
-
-[node name="BackgroundScreams" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 13 )
-volume_db = -13.126
-autoplay = true

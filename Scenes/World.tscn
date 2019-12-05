@@ -1,0 +1,389 @@
+[gd_scene load_steps=19 format=2]
+
+[ext_resource path="res://Scenes/Ground.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Lamp.tscn" type="PackedScene" id=2]
+[ext_resource path="res://RedCar.tscn" type="PackedScene" id=3]
+[ext_resource path="res://FPSCharacter.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Zombie.tscn" type="PackedScene" id=5]
+[ext_resource path="res://HUD.tscn" type="PackedScene" id=6]
+[ext_resource path="res://EndDoor.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Truck.tscn" type="PackedScene" id=8]
+[ext_resource path="res://GreenCar.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Scenes/fire.tscn" type="PackedScene" id=10]
+
+[sub_resource type="CubeMesh" id=1]
+
+[sub_resource type="SpatialMaterial" id=2]
+albedo_color = Color( 0.764706, 0.764706, 0.764706, 1 )
+
+[sub_resource type="BoxShape" id=3]
+extents = Vector3( 0.993541, 1, 1 )
+
+[sub_resource type="Animation" id=4]
+length = 10.0
+loop = true
+step = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:translation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 1.5, 2, 2.5, 3, 4, 4.5, 6, 7, 8, 10 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0, 0, 52.9693 ), Vector3( 2.82593, 0, 52.9693 ), Vector3( 2.82593, 2.68528, 52.9693 ), Vector3( 8.69756, 2.68528, 52.9693 ), Vector3( 8.698, 0, 52.969 ), Vector3( 13.2977, 0, 56.9274 ), Vector3( 13.2977, 0, 65.6054 ), Vector3( 23.0412, 0, 67.3146 ), Vector3( 22.1232, 0, 38.5112 ), Vector3( 34.0919, 0, 37.753 ), Vector3( 34.1122, 0, 46.5111 ), Vector3( 69.7156, 0, 47.9312 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 2.5, 4, 4.5, 7 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0, 30.5332, 0 ), Vector3( 0, -84.5056, 0 ), Vector3( 0, -17.7588, 0 ), Vector3( 0, -67.388, 0 ) ]
+}
+
+[sub_resource type="Animation" id=5]
+length = 10.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:translation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1, 1.4, 2, 2.4, 3.8, 4.6, 5, 5.3, 6.5, 6.9, 7.3, 8, 9, 10 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector3( 85.0409, 0.0712593, 67.8442 ), Vector3( 69.2026, 0.0712593, 67.8442 ), Vector3( 69.2026, 2.1593, 65.6622 ), Vector3( 69.2026, 2.1593, 61.1085 ), Vector3( 69.2026, -0.100371, 59.4875 ), Vector3( 74.1057, -0.100371, 46.6944 ), Vector3( 77.2404, 2.53901, 46.6944 ), Vector3( 80.5381, 2.53901, 46.6944 ), Vector3( 83.077, 0.238548, 46.6944 ), Vector3( 83.077, 0.238548, 29.0161 ), Vector3( 86.3835, 0.238548, 26.5223 ), Vector3( 81.8392, 0.238548, 22.6164 ), Vector3( 75.3492, 0.238548, 22.6164 ), Vector3( 64.0026, 0.238548, 17.2254 ), Vector3( 64.0026, 0.238548, 2.40116 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1.4, 2.4, 3.8, 4, 4.6, 7.3, 8, 9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0, -87.2077, 0 ), Vector3( 0, 170.216, 0 ), Vector3( 0, 170.216, 0 ), Vector3( 0, -165.406, 0 ), Vector3( 0, 84.7496, 0 ), Vector3( 0, 84.7496, 0 ), Vector3( 0, -147.138, 0 ), Vector3( 0, -162.357, 0 ), Vector3( 0, 167.801, 0 ) ]
+}
+
+[sub_resource type="Animation" id=6]
+length = 8.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:translation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1.5, 2.4, 3.1, 3.6, 4.1, 5, 6, 6.9, 7.1, 8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector3( 83.7803, 0.0712593, -16.8221 ), Vector3( 64.1411, 0.0712593, -16.8221 ), Vector3( 60.8331, 0.0712593, -16.8221 ), Vector3( 58.9412, 4.92962, -16.8221 ), Vector3( 56.0449, 4.92962, -16.8221 ), Vector3( 53.4503, 0.319602, -16.8221 ), Vector3( 34.6221, 0.319602, -18.6985 ), Vector3( 29.9239, 0.319602, -2.5346 ), Vector3( 14.1431, 0.319602, -2.5346 ), Vector3( 14.1431, 0.319602, 5.68882 ), Vector3( 14.1431, 0.319602, 15.6885 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1.5, 2.4, 7.1, 8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0, -72.5728, 0 ), Vector3( 0, -31.6534, 0 ), Vector3( 0, -77.9304, 0 ), Vector3( 0, -40.5654, 0 ), Vector3( 0, 4.32255, 0 ) ]
+}
+
+[sub_resource type="Animation" id=7]
+length = 8.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:translation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1.4, 2, 2.6, 2.9, 3.2, 4, 5, 5.5, 5.9, 7, 7.5, 8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector3( 9.03696, 0.319602, -19.6163 ), Vector3( 46.0776, 0.319602, -19.6163 ), Vector3( 52.6418, 0.319602, -12.4341 ), Vector3( 52.6418, 2.58364, -8.47504 ), Vector3( 52.6418, 2.58364, -5.32052 ), Vector3( 52.6418, 0.337205, -4.02339 ), Vector3( 61.2683, 0.337205, 0.0435104 ), Vector3( 61.2683, 0.337205, 20.4384 ), Vector3( 65.9341, -0.100945, 27.2549 ), Vector3( 65.9341, -0.100945, 33.3264 ), Vector3( 50.3362, -0.100945, 33.3264 ), Vector3( 50.3362, -0.100945, 25.1017 ), Vector3( 55.6341, -0.100945, 25.1017 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1.4, 2, 2.6, 4, 5, 5.5, 5.9, 7, 7.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0, 73.2816, 0 ), Vector3( 0, 29.5573, 0 ), Vector3( 0, -26.3474, 0 ), Vector3( 0, -26.3474, 0 ), Vector3( 0, 52.8345, 0 ), Vector3( 0, 57.9184, 0 ), Vector3( 0, 11.2288, 0 ), Vector3( 0, -70.7253, 0 ), Vector3( 0, -70.7253, 0 ), Vector3( 0, 66.7954, 0 ) ]
+}
+
+[sub_resource type="Animation" id=8]
+length = 5.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:translation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.8, 1.3, 1.8, 2.4, 2.8, 3.3, 3.8, 4.5, 5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector3( 33.8674, -0.100945, 31.1798 ), Vector3( 38.0143, -0.100945, 36.3462 ), Vector3( 39.7083, -0.100945, 27.0711 ), Vector3( 43.361, -0.100945, 33.1219 ), Vector3( 46.4636, -0.100945, 26.68 ), Vector3( 49.9302, -0.100945, 33.5214 ), Vector3( 55.4758, -0.100945, 33.2448 ), Vector3( 48.5775, -0.100945, 37.6775 ), Vector3( 39.1646, -0.100945, 35.4289 ), Vector3( 42.3737, -0.100945, 33.2608 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.8, 1.3, 1.8, 2.4, 2.8, 3.3, 3.8, 4.5, 5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0, 66.7954, 0 ), Vector3( 0, 97.7444, 0 ), Vector3( 0, 49.6135, 0 ), Vector3( 0, 49.6135, 0 ), Vector3( 0, 49.6135, 0 ), Vector3( 0, 58.7416, 0 ), Vector3( 0, 17.316, 0 ), Vector3( 0, 120.426, 0 ), Vector3( 0, 87.1564, 0 ), Vector3( 0, 87.1564, 0 ) ]
+}
+
+[node name="World" index="0" instance=ExtResource( 1 )]
+
+[node name="Ground" parent="." index="0"]
+editor/display_folded = false
+
+[node name="MeshInstance" parent="Ground" index="1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0281525, -0.133655, -0.0647487 )
+
+[node name="Spatial4" parent="." index="1" instance=ExtResource( 2 )]
+transform = Transform( 0.725915, 0, -0.687785, 0, 1, 0, 0.687785, 0, 0.725915, 12.8719, -0.0707623, -19.1734 )
+
+[node name="Car" parent="." index="2" instance=ExtResource( 3 )]
+transform = Transform( 0.987606, -0.156951, 0, 0.156951, 0.987606, 0, 0, 0, 1, 31.9237, 1.90717, -37.5872 )
+
+[node name="SmallBuilding23" parent="Buildings" index="39"]
+transform = Transform( 1.2, 0, 0, 0, 1.5, 0, 0, 0, 1, 45.4115, -0.515193, -30.7248 )
+
+[node name="Skyscraper" parent="Buildings" index="44"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 44.7665, -0.509735, 33.5291 )
+
+[node name="SmallBuilding2" parent="Buildings" index="76"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 44.9456, -0.467979, 22.0115 )
+
+[node name="SmallBuilding41" parent="Buildings" index="82"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 42.9819, -0.481558, 22.0115 )
+
+[node name="SmallBuilding33" parent="Buildings" index="85"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 44.0388, 1.30328, 21.9865 )
+
+[node name="SmallBuilding86" parent="Buildings" index="96"]
+transform = Transform( -1.00008, 0, -1.27113, 0, 1.8, 0, 0.663198, 0, -1.91683, -47.7127, -0.673815, 43.3694 )
+
+[node name="Skyscraper7" parent="Buildings" index="123"]
+transform = Transform( -1.9, 0, 0.000552404, 0, 2, 0, -0.000699712, 0, -1.5, 36.6919, -0.945822, 15.0708 )
+
+[node name="Spatial" parent="Buildings" index="142"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -38.793, -0.25, -24.214 )
+
+[node name="Spatial4" parent="Buildings" index="143"]
+transform = Transform( 0.0279437, 0, -0.999609, 0, 1, 0, 0.999609, 0, 0.0279437, -14.391, -0.2, -22.574 )
+
+[node name="Spatial5" parent="Buildings" index="144"]
+transform = Transform( -0.0192674, 0, 0.999814, 0, 1, 0, -0.999814, 0, -0.0192674, -8.68457, -0.237195, -47.1246 )
+
+[node name="Spatial9" parent="Buildings" index="146"]
+transform = Transform( -0.0191379, 0, 0.999817, 0, 1, 0, -0.999817, 0, -0.0191379, 12.1628, -0.153016, 18.8495 )
+
+[node name="Spatial6" parent="Buildings" index="147"]
+transform = Transform( 0.00597551, 0, 0.999982, 0, 1, 0, -0.999982, 0, 0.00597551, -3.88447, -0.0241348, -10.5027 )
+
+[node name="Spatial13" parent="Buildings" index="148" instance=ExtResource( 2 )]
+transform = Transform( -0.760242, 0, 0.649642, 0, 1, 0, -0.649642, 0, -0.760242, -43.8855, -0.332225, 47.2149 )
+
+[node name="Spatial12" parent="Buildings" index="150" instance=ExtResource( 2 )]
+transform = Transform( 0.729982, 0, 0.683467, 0, 1, 0, -0.683467, 0, 0.729982, 24.206, -0.0069983, 19.728 )
+
+[node name="Lamp6" parent="Buildings" index="151" instance=ExtResource( 2 )]
+transform = Transform( 0.798379, 0, -0.602155, 0, 1, 0, 0.602155, 0, 0.798379, 13.3208, -0.153016, -9.2191 )
+
+[node name="Lamp3" parent="Buildings" index="152" instance=ExtResource( 2 )]
+transform = Transform( 0.729982, 0, 0.683467, 0, 1, 0, -0.683467, 0, 0.729982, -35.0524, -0.0069983, -45.4631 )
+
+[node name="Lamp2" parent="Buildings" index="153" instance=ExtResource( 2 )]
+transform = Transform( -0.998368, 0, 0.0571099, 0, 1, 0, -0.0571099, 0, -0.998368, 5.77415, -0.0069983, -32.9723 )
+
+[node name="Lamp" parent="Buildings" index="154" instance=ExtResource( 2 )]
+transform = Transform( -0.0172734, 0, -0.999852, 0, 1, 0, 0.999852, 0, -0.0172734, 45.175, -0.332225, 38.0725 )
+
+[node name="Lamp4" parent="Buildings" index="155" instance=ExtResource( 2 )]
+transform = Transform( -0.916632, 0, 0.399734, 0, 1, 0, -0.399734, 0, -0.916632, -12.4675, -0.662565, 36.7302 )
+
+[node name="Lamp5" parent="Buildings" index="156" instance=ExtResource( 2 )]
+transform = Transform( 0.646768, -6.40246e-06, -0.762688, 0.000521272, 1, 0.000433651, 0.762688, -0.000678038, 0.646768, -27.5894, -0.662565, 0.29453 )
+
+[node name="Spatial7" parent="Buildings" index="157"]
+transform = Transform( -0.999843, 0, -0.0177182, 0, 1, 0, 0.0177182, 0, -0.999843, -45.8616, 0, 11.1592 )
+
+[node name="Doorframe" type="MeshInstance" parent="Buildings" index="158"]
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10.7792, 0.615856, 8.66787 )
+mesh = SubResource( 1 )
+material/0 = SubResource( 2 )
+
+[node name="StaticBody" type="StaticBody" parent="Buildings/Doorframe" index="0"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Buildings/Doorframe/StaticBody" index="0"]
+shape = SubResource( 3 )
+
+[node name="Spatial" parent="." index="4"]
+transform = Transform( -0.998795, 0, -0.0490714, 0, 1, 0, 0.0490714, 0, -0.998795, -10.864, -1.7556, 8.58999 )
+
+[node name="FPSCharacter" parent="." index="6" instance=ExtResource( 4 )]
+transform = Transform( -0.287127, 0, -0.0869375, 0, 0.3, 0, 0.0869375, 0, -0.287127, -43.2775, 0.476814, -45.1992 )
+
+[node name="Zombies" type="Spatial" parent="." index="7"]
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -43.0642, 0, -24.5046 )
+
+[node name="Z1" parent="Zombies" index="0" instance=ExtResource( 5 )]
+transform = Transform( 0.750581, 0, 0.276818, 0, 0.8, 0, -0.276818, 0, 0.750581, 7.78266, 2.10757, 52.9693 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Zombies/Z1" index="2"]
+autoplay = "Z1A"
+anims/Z1A = SubResource( 4 )
+
+[node name="Z2" parent="Zombies" index="1" instance=ExtResource( 5 )]
+transform = Transform( -0.788365, 0, 0.135942, 0, 0.8, 0, -0.135942, 0, -0.788365, 69.2026, 2.1593, 61.1085 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Zombies/Z2" index="2"]
+autoplay = "Z1A"
+anims/Z1A = SubResource( 5 )
+
+[node name="Z3" parent="Zombies" index="2" instance=ExtResource( 5 )]
+transform = Transform( 0.797724, 0, 0.060297, 0, 0.8, 0, -0.060297, 0, 0.797724, 14.1431, -0.0823465, 15.6885 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Zombies/Z3" index="2"]
+autoplay = "Z3A"
+anims/Z3A = SubResource( 6 )
+
+[node name="Z4" parent="Zombies" index="3" instance=ExtResource( 5 )]
+transform = Transform( 0.315213, 0, 0.735283, 0, 0.8, 0, -0.735283, 0, 0.315213, 55.6341, -0.100945, 25.1017 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Zombies/Z4" index="2"]
+autoplay = "Z4A"
+anims/Z4A = SubResource( 7 )
+
+[node name="Z5" parent="Zombies" index="4" instance=ExtResource( 5 )]
+transform = Transform( 1.29588, 0, 1.52338, 0, 2, 0, -1.52338, 0, 1.29588, 43.6489, -0.100945, 32.5241 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Zombies/Z5" index="2"]
+autoplay = "Z5A"
+anims/Z5A = SubResource( 8 )
+
+[node name="HUD" parent="." index="8" instance=ExtResource( 6 )]
+
+[node name="End Door" parent="." index="9" instance=ExtResource( 7 )]
+transform = Transform( -1.31134e-08, 0, 0.3, 0, 0.3, 0, -0.3, 0, -1.31134e-08, -9.64429, 0.0302184, 8.86129 )
+
+[node name="Lamp" parent="." index="10" instance=ExtResource( 2 )]
+transform = Transform( 0.690164, 0, 0.723653, 0, 1, 0, -0.723653, 0, 0.690164, 36.9498, 0, -16.927 )
+
+[node name="PileUp" parent="." index="11" instance=ExtResource( 8 )]
+editor/display_folded = true
+transform = Transform( 0.138343, -1.43248, -0.422924, 1.49361, 0.132681, 0.0391727, 5.58794e-09, -0.424734, 1.43861, 32.1079, 0.727398, -37.3023 )
+
+[node name="GreenCar" parent="PileUp" index="1" instance=ExtResource( 9 )]
+transform = Transform( 0.0131351, 0.689522, -0.405449, -0.151787, -0.395987, -0.678348, -0.785359, 0.0880656, 0.124324, -0.00285506, -0.81467, -0.310539 )
+
+[node name="Fire" parent="PileUp" index="2" instance=ExtResource( 10 )]
+transform = Transform( 0.0376089, 0.728715, 0.173378, -0.717335, 0.085022, -0.201748, -0.215677, -0.15571, 0.70124, 1.23472, -0.380976, -0.112478 )
+
+[node name="RedCar" parent="." index="12" instance=ExtResource( 3 )]
+transform = Transform( 0.0323639, 0.542337, -0.839538, -0.998224, 0.059569, 0, 0.0500104, 0.838047, 0.543301, 32.3147, 0.765434, 34.7911 )
+
+[node name="RedCar2" parent="." index="13" instance=ExtResource( 3 )]
+editor/display_folded = true
+transform = Transform( 0.0323639, 0.542337, -0.839538, -0.998224, 0.059569, 0, 0.0500104, 0.838047, 0.543301, -10.9562, 0.765434, 4.66911 )
+
+[node name="GreenCar" parent="RedCar2" index="1" instance=ExtResource( 9 )]
+transform = Transform( -0.131755, -0.94675, 0.293773, 0.71531, -0.295974, -0.633031, 0.686272, 0.126734, 0.716218, 0.655115, -2.23223, 0.964255 )
+
+[node name="Fire" parent="RedCar2" index="2" instance=ExtResource( 10 )]
+transform = Transform( -0.0680378, -0.818761, -0.570088, 0.856293, 0.245312, -0.454514, 0.511988, -0.519087, 0.68441, -1.00328, 0.0598712, 0 )
+
+[node name="Fire2" parent="RedCar2" index="3" instance=ExtResource( 10 )]
+transform = Transform( 0.452157, -0.890387, -0.0525484, 0.696431, 0.389243, -0.602886, 0.557257, 0.236003, 0.796095, -0.394831, -1.28257, -0.203909 )
+
+[node name="UpsideDownTruck" parent="." index="14" instance=ExtResource( 8 )]
+transform = Transform( -0.96496, -0.0219144, 0.26148, -0.0680861, -0.941464, -0.330166, 0.253409, -0.3364, 0.906983, -38.5106, 2.94082, -10.4016 )
+
+[node name="Fire" parent="UpsideDownTruck" index="1" instance=ExtResource( 10 )]
+transform = Transform( -0.641392, 0.132026, 0.459551, -0.32432, -0.685108, -0.255824, 0.351332, -0.391405, 0.602801, -0.0107841, -0.149167, -0.0523148 )
+
+[node name="Green Car" parent="." index="15" instance=ExtResource( 9 )]
+transform = Transform( -0.617209, 0, -0.655022, 0, 0.9, 0, 0.655022, 0, -0.617208, -33.3967, 0.0169797, -18.7131 )
+
+[node name="UpsideDownTruck2" parent="." index="16" instance=ExtResource( 8 )]
+transform = Transform( -0.79478, 0.424622, -0.433614, -0.025232, -0.736977, -0.675447, -0.606373, -0.52589, 0.596448, -33.9495, 1.17545, -17.0024 )
+
+[node name="Fire" parent="UpsideDownTruck2" index="1" instance=ExtResource( 10 )]
+transform = Transform( -0.641392, 0.132026, 0.459551, -0.32432, -0.685108, -0.255824, 0.351332, -0.391405, 0.602801, -0.0107841, -0.149167, -0.0523148 )
+
+[node name="Lamp2" parent="." index="17" instance=ExtResource( 2 )]
+transform = Transform( 0.723015, 0, -0.690832, 0, 1, 0, 0.690832, 0, 0.723015, -30.2475, -0.0280311, -19.4613 )
+
+[node name="Sidewise Car" parent="." index="18" instance=ExtResource( 3 )]
+editor/display_folded = true
+transform = Transform( -0.195252, 1.07572, -0.605979, -1.2299, -0.223239, 0, -0.108222, 0.596237, 1.09329, 22.5116, 0.923637, 12.4972 )
+
+[node name="Fire" parent="Sidewise Car" index="1" instance=ExtResource( 10 )]
+transform = Transform( 0.900001, 1.11759e-08, 0, 4.09782e-08, 0.9, -1.19209e-07, 8.19564e-08, -2.98023e-07, 0.899999, -0.422949, 0.0395336, -0.114391 )
+
+[node name="Spatial2" parent="." index="19" instance=ExtResource( 9 )]
+transform = Transform( 0.00883012, 0, -0.999961, 0, 1, 0, 0.999961, 0, 0.00883012, -27.2892, 0, 34.7864 )
+
+[node name="Spatial3" parent="." index="20" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -27.5633, 0, 37.2434 )
+
+[node name="UpsideDownGreenCar" parent="." index="21" instance=ExtResource( 9 )]
+transform = Transform( -0.991256, 0.125683, -0.0401881, -0.128786, -0.855193, 0.502054, 0.0287309, 0.50284, 0.863902, -9.21848, 1.03552, 21.5195 )
+
+[node name="Fire" parent="UpsideDownGreenCar" index="1" instance=ExtResource( 10 )]
+transform = Transform( -0.468094, 0.144922, -0.0994283, -0.173518, -0.426025, 0.195944, -0.0279249, 0.217945, 0.449133, -0.251781, 1.32889, 0.81452 )
+
+[node name="Fire2" parent="UpsideDownGreenCar" index="2" instance=ExtResource( 10 )]
+transform = Transform( -0.468094, 0.144922, -0.0994283, -0.173518, -0.426025, 0.195944, -0.0279249, 0.217945, 0.449133, -1.12847, 0.574132, -0.696014 )
+
+[node name="UpsideDownGreenCar2" parent="." index="22" instance=ExtResource( 9 )]
+transform = Transform( -0.337476, 0.37616, 0.554178, -0.0965891, -0.641395, 0.376541, 0.662782, 0.0980612, 0.337051, -8.49548, 1.03552, 14.348 )
+
+[node name="Fire" parent="UpsideDownGreenCar2" index="1" instance=ExtResource( 10 )]
+transform = Transform( -0.468094, 0.144922, -0.0994283, -0.173518, -0.426025, 0.195944, -0.0279249, 0.217945, 0.449133, -0.251781, 1.32889, 0.81452 )
+
+[node name="Fire2" parent="UpsideDownGreenCar2" index="2" instance=ExtResource( 10 )]
+transform = Transform( -0.468094, 0.144922, -0.0994283, -0.173518, -0.426025, 0.195944, -0.0279249, 0.217945, 0.449133, -1.12847, 0.574132, -0.696014 )
+
+[node name="Spatial5" parent="." index="23" instance=ExtResource( 8 )]
+transform = Transform( 0.993784, 0.00266647, -0.11129, 0, -0.999713, -0.0239527, -0.111322, 0.0238038, -0.993499, -10.231, 1.18402, 13.7932 )
+
+[node name="Spatial6" parent="." index="24" instance=ExtResource( 2 )]
+transform = Transform( 0.779698, 0, 0.626156, 0, 1, 0, -0.626156, 0, 0.779698, -12.4987, 0, 11.1021 )
+[connection signal="body_entered" from="Zombies/Z1" to="FPSCharacter" method="_on_Z1_body_entered"]
+[connection signal="body_entered" from="Zombies/Z2" to="FPSCharacter" method="_on_Z2_body_entered"]
+[connection signal="body_entered" from="Zombies/Z3" to="FPSCharacter" method="_on_Z3_body_entered"]
+[connection signal="body_entered" from="Zombies/Z4" to="FPSCharacter" method="_on_Z4_body_entered"]
+[connection signal="body_entered" from="Zombies/Z5" to="FPSCharacter" method="_on_Z5_body_entered"]
+[connection signal="body_entered" from="End Door" to="FPSCharacter" method="_on_End_Door_body_entered"]

@@ -8,10 +8,6 @@
 
 [node name="StaticBody" type="StaticBody" parent="."]
 
-[node name="CollisionShape" type="CollisionShape" parent="StaticBody"]
-transform = Transform( 1.16, 0, 0, 0, 2.24, 0, 0, 0, 1.16, 0.621799, 2.59216, -0.000391006 )
-shape = SubResource( 1 )
-
 [node name="modularBuildings_054" type="MeshInstance" parent="StaticBody"]
 transform = Transform( 2, 0, 0, 0, 7, 0, 0, 0, 2, -0.354795, 0.406187, 0.981147 )
 mesh = ExtResource( 1 )
@@ -21,3 +17,7 @@ material/2 = null
 material/3 = null
 material/4 = null
 material/5 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="StaticBody/modularBuildings_054"]
+transform = Transform( 0.58, 0, 0, 0, 0.32, 0, 0, 0, 0.58, 0.488297, 0.312282, -0.490769 )
+shape = SubResource( 1 )
